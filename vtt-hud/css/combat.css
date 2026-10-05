@@ -1,0 +1,53 @@
+/* Kampfschale über dem aktuellen HUD. Engine bleibt js/game/w100.js. */
+:root { --dock: 340px; }
+.log-panel { width: var(--dock); display: flex; flex-direction: column; top: 64px; bottom: 16px; }
+.lp-head select, .lp-head button, .map-chip, .seat-toggle, .lobby button, .result button {
+  background: #14141e; color: var(--text); border: 1px solid rgba(212,175,55,.45); border-radius: 6px; padding: 4px 8px;
+}
+.roster { display: flex; gap: 6px; padding: 8px; overflow-x: auto; border-bottom: 1px solid rgba(212,175,55,.2); }
+.roster button { flex: none; width: 54px; padding: 4px; border-radius: 8px; border: 1px solid rgba(212,175,55,.3); background: #12121c; color: inherit; }
+.roster button img { width: 100%; height: 36px; object-fit: cover; border-radius: 4px; display: block; }
+.roster button span { display: block; font-size: 9px; margin-top: 2px; }
+.roster button.on { border-color: #4ade80; box-shadow: 0 0 10px rgba(74,222,128,.4); }
+.sheet { display: grid; grid-template-columns: 64px 1fr; gap: 8px; padding: 8px 10px; border-bottom: 1px solid rgba(212,175,55,.2); }
+.sheet img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; border: 1px solid rgba(212,175,55,.4); }
+.sheet b { color: var(--gold); }
+.sheet p { margin: 2px 0 0; font-size: 11px; color: #c8c8c8; }
+.vitals { display: flex; gap: 8px; font-size: 11px; margin-top: 4px; }
+.ap { display: flex; gap: 4px; align-items: center; }
+.ap i { width: 10px; height: 10px; border-radius: 50%; background: #333; border: 1px solid var(--gold); display: inline-block; }
+.ap i.on { background: var(--gold); }
+.threat { color: #f87171; font-weight: bold; }
+.quick-actions { bottom: 92px; gap: 10px; }
+.quick-action { width: 74px; height: 64px; border-radius: 14px; flex-direction: column; overflow: visible; }
+.quick-action img { width: 22px; height: 22px; }
+.action-name { position: static; font-size: 9px; line-height: 1.1; max-width: 68px; text-align: center; color: #e5d9b8; }
+.mapbar { position: absolute; left: 50%; top: 16px; transform: translateX(-50%); display: flex; gap: 6px; z-index: 2; pointer-events: auto; }
+.map-chip.on, .seat-toggle.on { border-color: var(--gold); color: var(--gold); }
+.floater { position: absolute; font: bold 16px Georgia, serif; pointer-events: none; animation: float 1.1s ease-out forwards; text-shadow: 0 2px 6px #000; z-index: 8; }
+.floater.dmg { color: #f87171; } .floater.heal, .floater.ok { color: #4ade80; } .floater.info { color: #fbbf24; }
+@keyframes float { to { transform: translateY(-36px); opacity: 0; } }
+.token.hit { animation: hit .35s ease; }
+@keyframes hit { 50% { filter: brightness(2.2) saturate(1.4); } }
+.token.dragging { z-index: 5; }
+#combat-canvas { position: absolute; left: 0; top: 0; pointer-events: none; }
+.lobby, .result { position: fixed; inset: 0; z-index: 30; display: flex; align-items: center; justify-content: center; background: rgba(6,6,12,.78); pointer-events: auto; }
+.lobby[hidden], .result[hidden] { display: none; }
+.lobby-card, .result-card { width: min(920px, calc(100% - 24px)); background: var(--panel); border: 2px solid rgba(212,175,55,.5); border-radius: 16px; padding: 18px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+.lobby h1, .result h2 { margin: 0 0 6px; color: var(--gold); font-weight: normal; }
+.lobby .sub, .result p { margin: 0 0 12px; color: #c8c8c8; }
+.pick-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.pick { text-align: left; padding: 8px; border-radius: 10px; border: 1px solid rgba(212,175,55,.3); background: #12121c; color: inherit; }
+.pick img { width: 100%; height: 72px; object-fit: cover; border-radius: 6px; }
+.pick b { display: block; margin-top: 6px; }
+.pick small { display: block; color: #bdbdbd; font-size: 10px; line-height: 1.3; }
+.pick.onA { border-color: #4ade80; box-shadow: 0 0 12px rgba(74,222,128,.35); }
+.pick.onB { border-color: #f87171; box-shadow: 0 0 12px rgba(248,113,113,.35); }
+.lobby-row { display: flex; gap: 8px; align-items: center; margin-top: 12px; flex-wrap: wrap; }
+.lobby-row button.primary, .result button { background: #3a2e12; color: var(--gold); }
+@media (max-width: 768px) {
+  .log-panel { width: calc(100% - 16px); top: auto; bottom: 118px; height: 34vh; }
+  .pick-grid { grid-template-columns: repeat(2, 1fr); }
+  .mapbar { display: none; }
+  .quick-actions { bottom: 168px; }
+}
