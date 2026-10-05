@@ -13,7 +13,7 @@ const panel = el('div', 'panel log-panel', `
   <div class="roster" id="roster"></div>
   <div class="sheet" id="sheet"></div>
   <label class="lp-zone" hidden>Trefferzone <select id="selZone" aria-label="Gewünschte Trefferzone"><option value="auto">Automatisch</option>${zoneOpts}</select><span>bei 2+ Erfolgsgraden oder Krit</span></label>
-  <div class="lp-body"><div class="lp-blick" hidden><img alt="Kampfszene"><span></span></div><div class="lp-log" aria-live="polite"></div>
+  <div class="lp-body"><div class="resolve" id="resolve"></div><div class="lp-blick" hidden><img alt="Kampfszene"><span></span></div><div class="lp-log" aria-live="polite"></div>
   <div class="lp-foot">Figur ziehen oder Karte antippen: bewegen. Gegner antippen: schlagen. Tasten 1–4. Zug beenden = passen.</div></div>`);
 $('#l9').appendChild(panel);
 $('b', panel).onclick = () => panel.classList.toggle('collapsed');
@@ -21,6 +21,8 @@ $('#newFight').onclick = () => openLobby();
 $('#selA').onchange = () => { pickA = $('#selA').value; if (S) setup(pickA, $('#selB').value); };
 $('#selB').onchange = () => { pickB = $('#selB').value; if (S) setup($('#selA').value, pickB); };
 
+const turnbar = el('div', 'turnbar', '');
+$('#l9').appendChild(turnbar);
 const mapbar = el('div', 'mapbar', MAPS.map(([id, name]) => `<button class="map-chip" data-map="${id}">${name}</button>`).join('') + `<button class="seat-toggle" id="hotseat">Beide spielen</button>`);
 $('#l9').appendChild(mapbar);
 mapbar.onclick = e => {
@@ -152,9 +154,25 @@ function render() {
     const a = lastBlick, z = a.ziel, w = { treffer: [z, 'offen'], pariert: [z, 'block'], ausgewichen: [z, 'ausweichen'], gebrochen: [z, 'gebrochen'] }[a.art] || [a.angreifer, WAFFE[a.angreifer]];
     $('img', bl).src = `assets/art/${w[0]}/${w[1]}.jpg`; $('span', bl).textContent = a.text; bl.hidden = false;
   }
-  paintSheet(); paintRoster();
+  paintSheet(); paintRoster(); paintResolve();
   document.querySelectorAll('.map-chip').forEach(b => b.classList.toggle('on', b.dataset.map === mapId));
   $('#hotseat')?.classList.toggle('on', hotseat);
+}
+function paintResolve() {
+  const text = lastBlick?.text || 'Noch kein Schlag. Ziehen bewegt, Antippen des Gegners schlägt.';
+  const wurf = Number((text.match(/Wurf (\d+)/) || [])[1] || 0);
+  const zone = Object.entries(W.ZONE_NAME).find(([, name]) => text.includes(name))?.[0] || '';
+  const rows = text.includes('Kritisch') && zone ? W.KRIT[zone] : text.includes('Patzer') ? W.PATZER : [];
+  const body = ['kopf', 'arm-links', 'arm-rechts', 'koerper', 'bein-links', 'bein-rechts'].map(id => `<button type="button" data-zone="${id}" class="${id === zone ? 'hit' : ''}">${W.ZONE_NAME[id]}</button>`).join('');
+  $('#resolve').innerHTML = `<div class="dice ${wurf ? 'shown' : ''}"><b>${wurf || '–'}</b><small>W100</small></div><div class="zones">${body}</div><p>${text.replace(/</g, '<')}</p>${rows.length ? `<ul>${rows.map(r => `<li class="${zone && wurf >= r.von && wurf <= r.bis ? 'on' : ''}"><b>${r.name}</b> ${r.von}–${r.bis} · ${r.folge}</li>`).join('')}</ul>` : ''}`;
+  $('#resolve').onclick = e => {
+    const z = e.target.closest('[data-zone]');
+    if (!z || $('#selZone').parentElement.hidden) return;
+    $('#selZone').value = z.dataset.zone;
+  };
+  const who = S.kaempfer[S.amZug];
+  turnbar.textContent = S.vorbei ? `Kampfende · ${S.kaempfer[S.sieger]?.name ?? 'niemand'}` : `Runde ${round} · ${who.name}${mine() ? ' · dein Zug' : ' · Gegner'} · ${S.punkte} AP`;
+  turnbar.classList.toggle('mine', mine());
 }
 function paintReach() {
   const side = S.amZug, w = F(W.BREITE);
