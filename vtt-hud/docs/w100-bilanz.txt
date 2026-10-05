@@ -1,0 +1,29 @@
+W100, 40 Duelle je Paarung, beide Seiten derselbe Bot.
+Läuferin schlägt und geht auf Abstand. Brecher und Wächter unverändert in den Rohwerten.
+brecher gegen laeuferin: 23/40 fuer brecher
+brecher gegen archivar: 36/40 fuer brecher
+brecher gegen waechter: 31/40 fuer brecher
+brecher gegen jaeger: 32/40 fuer brecher
+laeuferin gegen brecher: 24/40 fuer laeuferin
+laeuferin gegen archivar: 9/40 fuer laeuferin
+laeuferin gegen waechter: 19/40 fuer laeuferin
+laeuferin gegen jaeger: 10/40 fuer laeuferin
+archivar gegen brecher: 13/40 fuer archivar
+archivar gegen laeuferin: 33/40 fuer archivar
+archivar gegen waechter: 10/40 fuer archivar
+archivar gegen jaeger: 15/40 fuer archivar
+waechter gegen brecher: 12/40 fuer waechter
+waechter gegen laeuferin: 17/40 fuer waechter
+waechter gegen archivar: 30/40 fuer waechter
+waechter gegen jaeger: 32/40 fuer waechter
+jaeger gegen brecher: 15/40 fuer jaeger
+jaeger gegen laeuferin: 34/40 fuer jaeger
+jaeger gegen archivar: 22/40 fuer jaeger
+jaeger gegen waechter: 12/40 fuer jaeger
+
+brecher 218/320 68.1%
+laeuferin 112/320 35.0%
+archivar 132/320 41.3%
+waechter 176/320 55.0%
+jaeger 152/320 47.5%
+offen 10

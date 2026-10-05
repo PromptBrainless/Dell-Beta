@@ -1,0 +1,16 @@
+{
+  "name": "gridless-fantasy-vtt-hud",
+  "version": "1.0.0",
+  "description": "Gridless Fantasy VTT HUD – Vanilla HTML/CSS/JS",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "lint": "find js scripts -type f \\( -name '*.js' -o -name '*.mjs' \\) -print0 | xargs -0 -n1 node --check",
+    "check": "node scripts/check.mjs",
+    "build:assets": "node scripts/build-assets.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": { "playwright": "^1.55.0" },
+  "license": "MIT"
+}

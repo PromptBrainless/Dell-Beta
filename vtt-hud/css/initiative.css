@@ -1,0 +1,20 @@
+.initiative-tracker{right:20px;top:90px;bottom:90px;width:280px;border-radius:12px;display:flex;flex-direction:column;overflow:hidden}
+.initiative-header{padding:12px 16px;background:rgba(0,0,0,.4);border-bottom:1px solid rgba(212,175,55,.3)}
+.initiative-header h3{margin:0;font-size:16px;color:var(--gold);letter-spacing:1px}
+.initiative-list{flex:1;overflow-y:auto;padding:8px}
+.initiative-entry{display:flex;align-items:center;gap:12px;padding:10px;margin-bottom:8px;background:rgba(255,255,255,.05);border:1px solid transparent;border-radius:8px;cursor:pointer;transition:all .2s}
+.initiative-entry:hover{background:rgba(255,255,255,.1)}
+.initiative-entry.active{background:rgba(74,222,128,.15);border-color:rgba(74,222,128,.5);box-shadow:0 0 15px rgba(74,222,128,.3)}
+.initiative-entry.next{border-color:rgba(251,191,36,.5);box-shadow:0 0 10px rgba(251,191,36,.2)}
+.initiative-entry.done{opacity:.5;filter:grayscale(.5)}
+.initiative-portrait{width:48px;height:48px;flex-shrink:0;border-radius:8px;overflow:hidden;border:2px solid rgba(212,175,55,.4)}
+.initiative-portrait img{width:100%;height:100%;object-fit:cover}
+.initiative-info{flex:1;min-width:0}
+.initiative-name{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.initiative-hp{width:60px;height:6px;margin-top:4px;background:rgba(0,0,0,.5);border-radius:3px;overflow:hidden}
+.initiative-hp i{display:block;height:100%;background:linear-gradient(90deg,#ef4444,#f87171);transition:width .3s}
+.initiative-value{font:bold 18px 'Courier New',monospace;color:var(--gold)}
+.initiative-controls{display:flex;gap:8px;padding:12px 16px;background:rgba(0,0,0,.4);border-top:1px solid rgba(212,175,55,.3)}
+.initiative-btn{flex:1;padding:10px 6px;font-size:12px;background:rgba(255,255,255,.05);border:1px solid rgba(212,175,55,.3);border-radius:6px;transition:all .2s}
+.initiative-btn:hover{background:rgba(212,175,55,.2);border-color:rgba(212,175,55,.6)}
+.initiative-btn.primary{background:rgba(212,175,55,.3);color:var(--gold);font-weight:bold}

@@ -1,0 +1,19 @@
+.token{position:absolute;pointer-events:auto;cursor:grab;border-radius:50%;touch-action:none;transition:box-shadow .2s,filter .2s,opacity .2s}
+.token .portrait{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:#14141e;border:2px solid rgba(180,150,100,.6);box-shadow:0 0 15px rgba(0,0,0,.5),inset 0 0 10px rgba(180,150,100,.2)}
+.token img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.token.selected{box-shadow:0 0 20px rgba(255,215,0,.8),0 0 40px rgba(255,215,0,.4)}
+.token.active{animation:tokenPulse 1.5s infinite}
+.token.hidden{opacity:.5;filter:grayscale(.5)}
+.token.defeated{filter:grayscale(1);opacity:.7}
+.token.defeated::after{content:'✕';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#ef4444;font-size:2em;transform:rotate(15deg)}
+.token .hp{position:absolute;left:0;right:0;bottom:-9px;height:6px;background:rgba(0,0,0,.7);border:1px solid rgba(180,150,100,.4);border-radius:3px;overflow:hidden}
+.token .hp i{display:block;height:100%;background:linear-gradient(90deg,#ef4444,#f87171);transition:width .3s}
+.token .name{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:12px;font-size:10px;background:rgba(0,0,0,.7);padding:2px 6px;border-radius:4px;white-space:nowrap;opacity:0;transition:opacity .2s;pointer-events:none}
+.token:hover .name,.token.selected .name{opacity:1}
+/* Layer 3 – Ringe (Disposition) */
+.token-ring{position:absolute;border-radius:50%;border:3px solid;pointer-events:none}
+.token-ring.friendly{border-color:#4ade80;box-shadow:0 0 10px rgba(74,222,128,.5)}
+.token-ring.neutral{border-color:#fbbf24;box-shadow:0 0 10px rgba(251,191,36,.5)}
+.token-ring.hostile{border-color:#f87171;box-shadow:0 0 10px rgba(248,113,113,.5)}
+.token-ring.secret{border-color:#a78bfa;box-shadow:0 0 10px rgba(167,139,250,.5)}
+@keyframes tokenPulse{0%,100%{box-shadow:0 0 15px rgba(74,222,128,.6)}50%{box-shadow:0 0 30px rgba(74,222,128,.95)}}

@@ -1,0 +1,8 @@
+.scale-bar{right:20px;bottom:20px;width:150px;height:44px;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer}
+.zoom-percent{font-size:12px;font-weight:bold;color:var(--gold)}
+.scale-visual{display:flex;align-items:center;gap:6px}
+.scale-line{width:80px;height:4px;background:rgba(255,255,255,.35);border-radius:2px;position:relative}
+.scale-line::after{content:'';position:absolute;left:50%;top:-2px;width:2px;height:8px;background:var(--gold)}
+.scale-label{font-size:10px;font-weight:600}
+.scale-bar.zooming{animation:zoomFlash .3s}
+@keyframes zoomFlash{50%{box-shadow:0 4px 25px rgba(212,175,55,.6)}}

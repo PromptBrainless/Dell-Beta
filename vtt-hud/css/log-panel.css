@@ -1,0 +1,15 @@
+.arena{position:absolute;left:0;top:0;width:640px;height:640px;z-index:0;pointer-events:none;border:2px solid rgba(212,175,55,.5);
+ background:linear-gradient(rgba(10,10,20,.35),rgba(10,10,20,.35)),url(../assets/textures/halle.jpg) center/cover;box-shadow:0 0 60px rgba(0,0,0,.8)}
+.log-panel{left:20px;top:64px;bottom:112px;width:300px;border-radius:12px;display:flex;flex-direction:column;overflow:hidden}
+.lp-head{display:flex;gap:6px;align-items:center;padding:8px 10px;background:rgba(0,0,0,.4);border-bottom:1px solid rgba(212,175,55,.3);font-size:12px}
+.lp-head b{color:var(--gold);cursor:pointer;flex:1}
+.lp-head select,.lp-head button{font-size:11px;background:#14141e;color:var(--text);border:1px solid rgba(212,175,55,.4);border-radius:4px;padding:2px 4px}
+.lp-body{display:flex;flex-direction:column;min-height:0;flex:1}
+.lp-blick{position:relative;height:150px;flex:none;background:#000}
+.lp-blick img{width:100%;height:100%;object-fit:cover}
+.lp-blick span{position:absolute;left:0;right:0;bottom:0;padding:6px 8px;font-size:11px;background:linear-gradient(transparent,rgba(0,0,0,.9))}
+.lp-log{flex:1;overflow-y:auto;padding:8px 10px;font-size:12px;line-height:1.35}
+.lp-log p{margin:0 0 6px;opacity:.65}.lp-log p:first-child{opacity:1;color:#fff}
+.lp-foot{padding:6px 10px;font-size:10px;color:#a0a0a0;border-top:1px solid rgba(212,175,55,.2)}
+.log-panel.collapsed{bottom:auto}.log-panel.collapsed .lp-body{display:none}
+@media (max-width:768px){.log-panel{left:8px;top:52px;width:calc(100% - 190px);bottom:130px}.lp-blick{height:100px}}

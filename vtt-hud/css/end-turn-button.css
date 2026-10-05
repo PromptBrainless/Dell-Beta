@@ -1,0 +1,6 @@
+.end-turn-btn{left:50%;bottom:20px;transform:translateX(-50%);width:180px;height:50px;border-radius:12px;color:var(--gold);font-weight:bold;letter-spacing:1px;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .2s}
+.end-turn-btn:hover{border-color:rgba(74,222,128,.7);color:var(--green);box-shadow:0 0 20px rgba(74,222,128,.4);transform:translateX(-50%) scale(1.05)}
+.end-turn-btn:active{transform:translateX(-50%) scale(.98)}
+.end-turn-btn:disabled{opacity:.5;cursor:not-allowed;color:#808080;border-color:rgba(255,255,255,.2)}
+.end-turn-btn:disabled:hover{transform:translateX(-50%);box-shadow:0 4px 20px rgba(0,0,0,.5)}
+.btn-icon{font-size:18px}

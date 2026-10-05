@@ -1,0 +1,7 @@
+.compass{left:20px;bottom:20px;width:80px;height:80px;border-radius:50%;border-width:3px;cursor:pointer;background:radial-gradient(circle,rgba(30,30,46,.9),rgba(20,20,35,.95))}
+.compass span{position:absolute;font-size:11px;font-weight:bold}
+.c-n{top:4px;left:50%;transform:translateX(-50%);color:#ef4444}.c-s{bottom:4px;left:50%;transform:translateX(-50%)}
+.c-e{right:6px;top:50%;transform:translateY(-50%)}.c-w{left:6px;top:50%;transform:translateY(-50%)}
+.compass-needle{position:absolute;left:50%;top:50%;width:12px;height:50px;transform:translate(-50%,-50%);transition:transform .3s;
+ clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:linear-gradient(#ef4444 50%,#e5e5e5 50%)}
+.compass-center{position:absolute;left:50%;top:50%;width:12px;height:12px;transform:translate(-50%,-50%);border-radius:50%;background:var(--gold);border:2px solid rgba(212,175,55,.6)}

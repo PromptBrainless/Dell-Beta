@@ -1,0 +1,9 @@
+.round-display{right:20px;top:20px;width:200px;height:60px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;padding:0 16px}
+.round-btn{width:36px;height:36px;font-size:18px;color:var(--gold);background:rgba(255,255,255,.05);border:1px solid rgba(212,175,55,.3);border-radius:8px;transition:all .2s}
+.round-btn:hover{background:rgba(212,175,55,.2);border-color:rgba(212,175,55,.6)}
+.round-btn:active{transform:scale(.95)}
+.round-info{display:flex;flex-direction:column;align-items:center}
+.round-label{font-size:10px;color:#a0a0a0;letter-spacing:2px}
+.round-value{font:bold 28px 'Courier New',monospace;color:var(--gold);min-width:60px;text-align:center}
+.round-display.combat-active .round-value{animation:roundPulse 2s infinite}
+@keyframes roundPulse{0%,100%{text-shadow:0 0 10px rgba(212,175,55,.5)}50%{text-shadow:0 0 20px rgba(212,175,55,.9)}}

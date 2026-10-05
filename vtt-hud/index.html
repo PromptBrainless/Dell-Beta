@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Gridless Fantasy VTT HUD</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/battlemap.css">
+<link rel="stylesheet" href="css/token.css">
+<link rel="stylesheet" href="css/initiative.css">
+<link rel="stylesheet" href="css/round-display.css">
+<link rel="stylesheet" href="css/compass.css">
+<link rel="stylesheet" href="css/scale-bar.css">
+<link rel="stylesheet" href="css/end-turn-button.css">
+<link rel="stylesheet" href="css/status-marker.css">
+<link rel="stylesheet" href="css/quick-actions.css">
+<link rel="stylesheet" href="css/log-panel.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<!-- Layer 0: Battlemap-Hintergrund (gridless, nur CSS) + Welt mit Layern 1-8 -->
+<div id="battlemap-container" class="battlemap-container">
+  <div id="world">
+    <div id="l0" class="arena"></div><!-- Arena-Boden (Bild aus Dell-Beta) -->
+    <div class="layer" id="l1" style="z-index:1"></div><!-- Gelände / Quest / Gefahr -->
+    <div class="layer" id="l2" style="z-index:2"></div><!-- Token-Basis -->
+    <div class="layer" id="l3" style="z-index:3"></div><!-- Token-Ringe -->
+    <div class="layer" id="l4" style="z-index:4"></div><!-- Reichweiten / Auren -->
+    <div class="layer" id="l5" style="z-index:5"></div><!-- Sichtkegel -->
+    <div class="layer" id="l6" style="z-index:6"></div><!-- Flächeneffekte -->
+    <div class="layer" id="l7" style="z-index:7"></div><!-- Statusmarker -->
+    <div class="layer" id="l8" style="z-index:8"></div><!-- Flankierung -->
+  </div>
+</div>
+
+<div id="l9" class="ui-layer" aria-label="HUD-Bedienelemente">
+<div id="layer-toggles" class="panel"></div>
+
+<div id="round-display" class="panel round-display">
+  <button id="round-prev" class="round-btn" title="Vorherige Runde">◄</button>
+  <div class="round-info"><span class="round-label">Runde</span><span id="round-value" class="round-value">1</span></div>
+  <button id="round-next" class="round-btn" title="Nächste Runde">►</button>
+</div>
+
+<div id="initiative-tracker" class="panel initiative-tracker">
+  <div class="initiative-header"><h3>Initiative</h3></div>
+  <div id="initiative-list" class="initiative-list"></div>
+  <div class="initiative-controls">
+    <button id="prev-round" class="initiative-btn">◄ Runde</button>
+    <button id="next-round" class="initiative-btn">Runde ►</button>
+    <button id="end-turn" class="initiative-btn primary">Zug beenden</button>
+  </div>
+</div>
+
+<div id="compass" class="panel compass" title="Auf Norden ausrichten">
+  <span class="c-n">N</span><span class="c-e">O</span><span class="c-s">S</span><span class="c-w">W</span>
+  <div class="compass-needle" id="compass-needle"></div><div class="compass-center"></div>
+</div>
+
+<div id="scale-bar" class="panel scale-bar" title="Zoom zurücksetzen">
+  <span id="zoom-percent" class="zoom-percent">100%</span>
+  <div class="scale-visual"><div class="scale-line"></div><span id="scale-label" class="scale-label">10 m</span></div>
+</div>
+
+<div id="quick-actions" class="quick-actions"></div>
+</div>
+<div id="l10" class="button-layer" aria-label="HUD-Aktionsschaltflächen">
+<button id="end-turn-btn" class="panel end-turn-btn"><span class="btn-icon">✓</span><span class="btn-text">Zug beenden</span></button>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/data/characters.js"></script>
+<script src="js/battlemap.js"></script>
+<script src="js/token.js"></script>
+<script src="js/overlays.js"></script>
+<script src="js/initiative.js"></script>
+<script src="js/round-display.js"></script>
+<script src="js/compass.js"></script>
+<script src="js/scale-bar.js"></script>
+<script src="js/end-turn-button.js"></script>
+<script src="js/status-marker.js"></script>
+<script src="js/quick-actions.js"></script>
+<script src="js/main.js"></script>
+<script type="module" src="js/game/bridge.js"></script><!-- Regeln aus Dell-Beta; braucht http-Server -->
+</body>
+</html>

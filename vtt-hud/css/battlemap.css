@@ -1,0 +1,18 @@
+/* Layer 0 – gridless: Verläufe, kein Raster */
+.battlemap-container{position:absolute;inset:0;overflow:hidden;touch-action:none;cursor:grab;
+ background:radial-gradient(circle at 30% 40%,rgba(74,14,78,.28),transparent 40%) 0 0/1400px 1400px,
+ radial-gradient(circle at 70% 70%,rgba(15,52,96,.55),transparent 45%) 0 0/1400px 1400px,
+ linear-gradient(135deg,#1a1a2e,#16213e 50%,#0f3460);
+ box-shadow:inset 0 0 100px rgba(0,0,0,.7)}
+.battlemap-container.panning{cursor:grabbing}
+.battlemap-container.combat{box-shadow:inset 0 0 100px rgba(140,0,0,.4)}
+#world{position:absolute;left:0;top:0;width:0;height:0;transform-origin:0 0}
+/* Taktische Overlays (Layer 4-6) */
+.aura,.cone,.aoe{position:absolute;border-radius:50%}
+.aoe{display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff}
+/* Marker (Layer 1) */
+.marker{position:absolute;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:18px;pointer-events:auto;
+ background:rgba(30,30,46,.88);border:2px solid var(--c);color:var(--c);box-shadow:0 0 12px var(--c)}
+.marker.danger{--c:#ef4444}.marker.quest,.marker.goal{--c:#d4af37}.marker.terrain{--c:#9ca3af}.marker.interact{--c:#60a5fa}
+.flank line{stroke:#fbbf24;stroke-width:2;stroke-dasharray:6 5}
+.flank text{fill:#fbbf24;font-size:16px;text-anchor:middle}

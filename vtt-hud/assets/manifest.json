@@ -1,0 +1,920 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "art:archivar:ausweichen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/archivar/ausweichen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:archivar:block",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/archivar/block.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:archivar:bogen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/archivar/bogen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:archivar:gebrochen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/archivar/gebrochen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:archivar:hammer",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/archivar/hammer.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:archivar:kette",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/archivar/kette.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:archivar:kurzschwert",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/archivar/kurzschwert.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:archivar:offen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/archivar/offen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:archivar:speer",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/archivar/speer.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:brecher:ausweichen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/brecher/ausweichen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:brecher:block",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/brecher/block.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:brecher:bogen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/brecher/bogen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:brecher:gebrochen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/brecher/gebrochen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:brecher:hammer",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/brecher/hammer.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:brecher:kette",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/brecher/kette.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:brecher:kurzschwert",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/brecher/kurzschwert.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:brecher:offen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/brecher/offen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:brecher:speer",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/brecher/speer.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:jaeger:ausweichen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/jaeger/ausweichen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:jaeger:block",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/jaeger/block.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:jaeger:bogen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/jaeger/bogen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:jaeger:gebrochen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/jaeger/gebrochen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:jaeger:hammer",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/jaeger/hammer.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:jaeger:kette",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/jaeger/kette.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:jaeger:kurzschwert",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/jaeger/kurzschwert.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:jaeger:offen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/jaeger/offen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:jaeger:speer",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/jaeger/speer.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:laeuferin:ausweichen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/laeuferin/ausweichen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:laeuferin:block",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/laeuferin/block.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:laeuferin:bogen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/laeuferin/bogen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:laeuferin:gebrochen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/laeuferin/gebrochen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:laeuferin:hammer",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/laeuferin/hammer.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:laeuferin:kette",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/laeuferin/kette.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:laeuferin:kurzschwert",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/laeuferin/kurzschwert.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:laeuferin:offen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/laeuferin/offen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:laeuferin:speer",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/laeuferin/speer.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:waechter:ausweichen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/waechter/ausweichen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:waechter:block",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/waechter/block.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:waechter:bogen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/waechter/bogen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:waechter:gebrochen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/waechter/gebrochen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:waechter:hammer",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/waechter/hammer.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:waechter:kette",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/waechter/kette.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:waechter:kurzschwert",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/waechter/kurzschwert.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:waechter:offen",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/waechter/offen.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "art:waechter:speer",
+      "layer": 9,
+      "files": {
+        "1x": "assets/art/waechter/speer.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "icons:dash",
+      "layer": 10,
+      "files": {
+        "1x": "assets/icons/dash.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:poisoned",
+      "layer": 10,
+      "files": {
+        "1x": "assets/icons/poisoned.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:potion",
+      "layer": 10,
+      "files": {
+        "1x": "assets/icons/potion.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:shield",
+      "layer": 10,
+      "files": {
+        "1x": "assets/icons/shield.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:spell",
+      "layer": 10,
+      "files": {
+        "1x": "assets/icons/spell.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:stunned",
+      "layer": 10,
+      "files": {
+        "1x": "assets/icons/stunned.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:sword",
+      "layer": 10,
+      "files": {
+        "1x": "assets/icons/sword.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "portraits:archivar",
+      "layer": 2,
+      "files": {
+        "1x": "assets/portraits/archivar.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "portraits:brecher",
+      "layer": 2,
+      "files": {
+        "1x": "assets/portraits/brecher.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "portraits:jaeger",
+      "layer": 2,
+      "files": {
+        "1x": "assets/portraits/jaeger.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "portraits:laeuferin",
+      "layer": 2,
+      "files": {
+        "1x": "assets/portraits/laeuferin.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "portraits:waechter",
+      "layer": 2,
+      "files": {
+        "1x": "assets/portraits/waechter.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "textures:bruch",
+      "layer": 0,
+      "files": {
+        "1x": "assets/textures/bruch.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "textures:funken",
+      "layer": 0,
+      "files": {
+        "1x": "assets/textures/funken.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "textures:halle",
+      "layer": 0,
+      "files": {
+        "1x": "assets/textures/halle.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "id": "textures:nebel",
+      "layer": 0,
+      "files": {
+        "1x": "assets/textures/nebel.jpg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 640,
+        "height": 360
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+@media (max-width:1024px){.initiative-tracker{width:240px;right:10px}.round-display{right:10px}}
+@media (max-width:768px){
+ #layer-toggles{left:8px;top:8px;font-size:10px;gap:6px;max-width:55vw}
+ .round-display{width:160px;height:50px;right:8px;top:8px}
+ .initiative-tracker{left:8px;right:8px;top:auto;bottom:8px;width:auto;height:112px}
+ .initiative-header,.initiative-controls{display:none}
+ .initiative-list{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden}
+ .initiative-entry{flex:none;width:150px;margin:0}
+ .compass{width:56px;height:56px;left:8px;bottom:128px}.compass span{font-size:9px}.compass-needle{height:36px}
+ .scale-bar{width:120px;height:38px;right:8px;bottom:128px}
+ .end-turn-btn{width:150px;height:44px;bottom:128px;font-size:12px}
+ .quick-actions{bottom:184px;transform:translateX(-50%) scale(.85)}
+}
+@media (max-width:480px){.quick-actions{gap:4px}.quick-action{width:40px;height:40px}.quick-action img{width:22px;height:22px}}

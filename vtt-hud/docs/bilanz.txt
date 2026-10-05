@@ -1,0 +1,31 @@
+ECHO//BRUCH · Simulationsprotokoll
+Stand des Systemcodes nach dem Balance-Patch.
+Kraftbonus nur im Trefferwurf. Rohschaden ist Waffe minus Rüstung.
+Block zieht mindestens den Schutzbonus ab, mindestens 2. Ausweichen ist immer −2.
+Ersttreffer von Archivar und Jäger ist auf 2 gedeckelt. Ein Fehlschlag lässt ein Angriffs-Echo.
+Wächter hält den ersten Treffer der Runde. Speer ignoriert Bewegung. Bogen aus der Distanz ignoriert 2 Rüstung.
+Paarungen 5×5 · 16 Samen · beide Seiten taktisch · Deckel 28 Runden
+Duelle 400 · vollständig, nicht gekürzt
+
+Siegquote je Figur (beide Seiten, Standardausrüstung)
+Figur | Spiele | Siege | Niederlagen | Unentschieden | Quote | Ø Runden | Ø Körper übrig | Siege nach Grund
+Brecher | 160 | 82 | 51 | 27 | 51.2% | 4.5 | 14.1 | Körper 56, Bruch 26
+Läuferin | 160 | 72 | 87 | 1 | 45.0% | 6.3 | 8.3 | Körper 68, Bruch 4
+Archivar | 160 | 122 | 34 | 4 | 76.3% | 6.8 | 10.6 | Bruch 48, Echo 74
+Wächter | 160 | 118 | 40 | 2 | 73.8% | 9.8 | 16.7 | Bruch 32, Körper 70, Zeit 16
+Jäger | 160 | 59 | 101 | 0 | 36.9% | 4.6 | 5.9 | Körper 59
+
+Aktionen, gezählt aus den Protokollzeilen
+Brecher | Angriff 86% | Schutz 3% | Bewegung 6% | Einfluss 5%
+Läuferin | Angriff 48% | Schutz 0% | Bewegung 26% | Einfluss 26%
+Archivar | Angriff 0% | Schutz 2% | Bewegung 0% | Einfluss 98%
+Wächter | Angriff 97% | Schutz 3% | Bewegung 0% | Einfluss 0%
+Jäger | Angriff 79% | Schutz 9% | Bewegung 0% | Einfluss 13%
+
+Matrix · Siege der linken Figur / Spiele (Unentschieden in Klammern)
+ | Brecher | Läuferin | Archivar | Wächter | Jäger
+Brecher | 3/16 (10) | 9/16 (1) | 8/16 | 7/16 (1) | 16/16
+Läuferin | 11/16 | 6/16 | 5/16 | 0/16 | 8/16
+Archivar | 8/16 (4) | 12/16 | 6/16 | 13/16 | 12/16
+Wächter | 10/16 (1) | 16/16 | 1/16 | 5/16 | 16/16
+Jäger | 0/16 | 10/16 | 5/16 | 0/16 | 7/16

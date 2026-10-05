@@ -1,0 +1,13 @@
+.status-stack{position:absolute;display:flex;gap:3px;pointer-events:none}
+.status-marker{position:relative;width:24px;height:24px;display:flex;align-items:center;justify-content:center;pointer-events:auto;cursor:pointer;
+ background:rgba(30,30,46,.85);border:1px solid rgba(212,175,55,.4);border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.5);transition:transform .2s}
+.status-marker img{width:18px;height:18px}
+.status-marker:hover{transform:scale(1.25)}
+.status-marker:hover::after{content:attr(data-name);position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.9);padding:3px 7px;border-radius:4px;font-size:10px;white-space:nowrap}
+.status-marker.buff{border-color:rgba(74,222,128,.6);box-shadow:0 0 10px rgba(74,222,128,.4)}
+.status-marker.debuff{border-color:rgba(239,68,68,.6);box-shadow:0 0 10px rgba(239,68,68,.4)}
+.status-marker.condition{border-color:rgba(251,191,36,.6);box-shadow:0 0 10px rgba(251,191,36,.4)}
+.status-marker.magical{border-color:rgba(167,139,250,.6);box-shadow:0 0 10px rgba(167,139,250,.4)}
+.status-marker.fading{animation:statusFade 1s infinite}
+.status-duration{position:absolute;right:-6px;bottom:-6px;width:16px;height:16px;border-radius:50%;background:#000;border:1px solid rgba(212,175,55,.5);font-size:9px;font-weight:bold;color:var(--gold);display:flex;align-items:center;justify-content:center}
+@keyframes statusFade{50%{opacity:.5}}
