@@ -8,9 +8,11 @@ let S, round = 1, lastBlick = null, temp = [], busy = false;
 
 /* ---------- Panel: Pairing, Blick-Bild, Protokoll ---------- */
 const opts = id => CHARACTERS.map(c => `<option value="${c.id}"${c.id === id ? ' selected' : ''}>${c.name}</option>`).join('');
+const zoneOpts = Object.entries(W.ZONE_NAME).map(([id, name]) => `<option value="${id}">${name}</option>`).join('');
 const panel = el('div', 'panel log-panel', `
   <div class="lp-head"><b>Kampfprotokoll</b><select id="selA">${opts('brecher')}</select><span>gegen</span><select id="selB">${opts('jaeger')}</select><button id="newFight">Neu</button></div>
-  <div class="lp-body"><div class="lp-blick" hidden><img alt=""><span></span></div><div class="lp-log"></div>
+  <label class="lp-zone" hidden>Trefferzone <select id="selZone" aria-label="Gewünschte Trefferzone"><option value="auto">Automatisch</option>${zoneOpts}</select><span>bei 2+ Erfolgsgraden oder Krit</span></label>
+  <div class="lp-body"><div class="lp-blick" hidden><img alt="Kampfszene"><span></span></div><div class="lp-log" aria-live="polite"></div>
   <div class="lp-foot">Karte anklicken: bewegen (markierter Bereich). Tasten 1–4, Zug beenden = Passen.</div></div>`);
 $('#l9').appendChild(panel);
 $('b', panel).onclick = () => panel.classList.toggle('collapsed');
@@ -21,10 +23,11 @@ $('.arena').style.width = $('.arena').style.height = F(W.BREITE) + 'px';
 /* ---------- Quick-Actions ---------- */
 const mine = () => !busy && S && !S.vorbei && S.amZug === 'A';
 const act = fn => () => { if (mine()) apply(fn(S)); };
-quickActionManager.add({ id: 'attack', name: 'Schlagen', icon: 'assets/icons/sword.svg', type: 'attack', onClick: act(s => makro(s, 'schlag')) });
+const selectedZone = () => $('#selZone').value === 'auto' ? null : $('#selZone').value;
+quickActionManager.add({ id: 'attack', name: 'Schlagen', icon: 'assets/icons/sword.svg', type: 'attack', onClick: act(s => makro(s, 'schlag', selectedZone())) });
 quickActionManager.add({ id: 'defend', name: 'Parieren', icon: 'assets/icons/shield.svg', type: 'defend', onClick: act(s => abwehrWaehlen(s, 'parieren')) });
 quickActionManager.add({ id: 'spell', name: 'Ausweichen', icon: 'assets/icons/dash.svg', type: 'spell', onClick: act(s => abwehrWaehlen(s, 'ausweichen')) });
-quickActionManager.add({ id: 'item', name: 'Vorrücken und schlagen', icon: 'assets/icons/potion.svg', type: 'item', onClick: act(s => makro(s, 'hinein')) });
+quickActionManager.add({ id: 'item', name: 'Vorrücken und schlagen', icon: 'assets/icons/potion.svg', type: 'item', onClick: act(s => makro(s, 'hinein', selectedZone())) });
 on('endTurn', act(passen));
 on('mapClick', d => {
   if (!mine() || !kann(S, 'bewegen')) return;
@@ -66,6 +69,7 @@ const flags = k => [
 
 function render() {
   const RGB = { A: '74,222,128', B: '239,68,68' };
+  $('.lp-zone', panel).hidden = !mine() || !charakter(S.kaempfer.A.id).ortwahl;
   temp.forEach(e => e.remove()); temp = [];
   ['A', 'B'].forEach(s => {
     const k = S.kaempfer[s], c = charakter(k.id), t = tokenManager.get(s), o = S.kaempfer[s === 'A' ? 'B' : 'A'];

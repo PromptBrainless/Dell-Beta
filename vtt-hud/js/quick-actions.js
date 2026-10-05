@@ -22,7 +22,10 @@ class QuickAction {
 class QuickActionManager {
   constructor() {
     this.actions = new Map(); this.box = $('#quick-actions');
-    addEventListener('keydown', e => { const a = this.getAll().find(x => x.hotkey === e.key); if (a) a.trigger(); });
+    addEventListener('keydown', e => {
+      if (e.target.closest?.('input, select, textarea, [contenteditable="true"]')) return;
+      const a = this.getAll().find(x => x.hotkey === e.key); if (a) a.trigger();
+    });
   }
   add(c) { const a = new QuickAction(c, this.actions.size); this.actions.set(c.id, a); this.box.appendChild(a.el); return a; }
   get(id) { return this.actions.get(id); }

@@ -4,6 +4,9 @@
 .lp-head{display:flex;gap:6px;align-items:center;padding:8px 10px;background:rgba(0,0,0,.4);border-bottom:1px solid rgba(212,175,55,.3);font-size:12px}
 .lp-head b{color:var(--gold);cursor:pointer;flex:1}
 .lp-head select,.lp-head button{font-size:11px;background:#14141e;color:var(--text);border:1px solid rgba(212,175,55,.4);border-radius:4px;padding:2px 4px}
+.lp-zone{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:7px 10px;border-bottom:1px solid rgba(212,175,55,.2);font-size:11px;color:var(--gold)}
+.lp-zone select{font-size:11px;background:#14141e;color:var(--text);border:1px solid rgba(212,175,55,.4);border-radius:4px;padding:3px 5px}
+.lp-zone span{flex-basis:100%;color:#a0a0a0;font-size:10px}
 .lp-body{display:flex;flex-direction:column;min-height:0;flex:1}
 .lp-blick{position:relative;height:150px;flex:none;background:#000}
 .lp-blick img{width:100%;height:100%;object-fit:cover}

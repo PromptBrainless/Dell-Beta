@@ -16,4 +16,7 @@ Engine (gebündelt), 5 Charaktere + Porträts, v2-Kampfgrafiken (`assets/art/<fi
 `.grok/`, `.vercel/`, Vite/React/Auth/Datenbank, `scripts/`, Screenshots, älterer HD-Satz (`public/kampf/hd`), `archive/`, `attachments/`, React-Komponenten (`src/components/echo`). Liegen weiter im Repo.
 
 ## Offen
-Zonenwahl (`ortwahl`), Krit-/Patzertafeln als eigene Anzeige, Würfelanimation, Foundry-Export (`export.ts`), HD-Satz.
+Krit-/Patzertafeln als eigene Anzeige, Würfelanimation, Foundry-Export (`export.ts`), HD-Satz.
+
+## Vercel
+Das HUD ist eine statische Website und benötigt keinen Build-Schritt. Importiere das Repository in Vercel und setze **Root Directory** auf `vtt-hud`, **Framework Preset** auf `Other`, **Build Command** leer und **Output Directory** auf `.`. Danach kann Vercel die enthaltene `index.html` direkt ausliefern. Eine tatsächliche Veröffentlichung erfordert Zugriff auf das zugehörige Vercel-Konto bzw. Projekt.
