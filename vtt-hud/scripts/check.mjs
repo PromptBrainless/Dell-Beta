@@ -64,7 +64,7 @@ try {
     if (missingLayers.length) errors.push(`${viewport.name}: fehlende Layer ${missingLayers.join(', ')}`);
 
     const brokenImages = await page.locator('img').evaluateAll(images =>
-      images.filter(image => image.complete && image.naturalWidth === 0).map(image => image.src));
+      images.filter(image => image.getAttribute('src') && image.complete && image.naturalWidth === 0).map(image => image.src));
     if (brokenImages.length) errors.push(`${viewport.name}: defekte Bilder ${brokenImages.join(', ')}`);
 
     await page.screenshot({ path: path.join(screenshotDir, `${viewport.name}.png`), fullPage: true });
