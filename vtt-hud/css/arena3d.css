@@ -15,7 +15,9 @@ aside img { width: 72px; height: 72px; object-fit: cover; border-radius: 8px; fl
 #actions button:disabled { opacity: .4; }
 .primary, #again { background: #3a2e12; color: #d4af37; }
 #resolve { position: absolute; right: 12px; top: 64px; width: 260px; padding: 10px; border-radius: 14px; background: rgba(12,12,20,.86); border: 1px solid rgba(212,175,55,.35); }
-.dice { font-size: 32px; color: #d4af37; }
+.dice.shown { animation: die .35s ease; }
+@keyframes die { 50% { transform: rotate(-8deg) scale(1.08); } }
+#mute { font: inherit; color: #d4af37; background: transparent; border: 0; cursor: pointer; }
 #lobby, #result { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(4,4,8,.78); }
 #lobby[hidden], #result[hidden] { display: none; }
 .card { width: min(880px, calc(100% - 24px)); padding: 18px; border-radius: 16px; background: linear-gradient(135deg, rgba(30,30,46,.96), rgba(16,16,28,.98)); border: 2px solid rgba(212,175,55,.5); }

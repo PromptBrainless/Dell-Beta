@@ -42,7 +42,9 @@
 
 .floater.dmg { color: #f87171; } .floater.heal, .floater.ok { color: #4ade80; } .floater.info { color: #fbbf24; }
 @keyframes float { to { transform: translateY(-36px); opacity: 0; } }
-.token.hit { animation: hit .35s ease; }
+.token.swing { animation: swing .35s ease; }
+@keyframes swing { 40% { transform: translateX(8px) rotate(8deg); } }
+
 @keyframes hit { 50% { filter: brightness(2.2) saturate(1.4); } }
 .token.dragging { z-index: 5; }
 #combat-canvas { position: absolute; left: 0; top: 0; pointer-events: none; }

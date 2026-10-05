@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import * as W from './game/w100.js';
+import { sfx, toggleMute } from './sfx.js';
 
 const CELL = 1;
 const ORIGIN = 32;
@@ -32,9 +33,11 @@ const sun = new THREE.DirectionalLight(0xffd7a1, 1.1);
 sun.position.set(12, 28, 8);
 sun.castShadow = true;
 scene.add(sun);
+const torches = [];
 [[-6, 2.2, -4], [8, 2.2, 6], [0, 3.4, 0]].forEach(([x, y, z], i) => {
   const l = new THREE.PointLight(i === 2 ? 0xffb25e : 0xff8a3d, 8, 18);
   l.position.set(x, y, z);
+  torches.push(l);
   scene.add(l);
 });
 
@@ -138,12 +141,30 @@ function tryMove(f) {
 }
 function apply(next) {
   if (!next || next === S) return;
+  const prev = S;
   if (S.amZug === 'B' && next.amZug === 'A' && !next.vorbei) round++;
   S = next;
   if (S.blick) lastBlick = S.blick;
+  cue(prev, S);
   render();
   if (S.vorbei) showEnd();
   if (!hotseat && !S.vorbei && S.amZug === 'B') { busy = true; setTimeout(() => { busy = false; if (S.amZug === 'B' && !S.vorbei) { const n = W.bot(S); apply(n === S ? W.passen(S) : n); } }, 700); }
+}
+function cue(prev, next) {
+  if (next.vorbei && !prev.vorbei) { sfx(next.sieger === 'A' || hotseat ? 'win' : 'lose'); return; }
+  if (next.blick && next.blick !== prev.blick) {
+    sfx('dice'); sfx('swing');
+    const art = next.blick.art;
+    if (art === 'treffer') sfx('hit');
+    else if (art === 'pariert') sfx('parry');
+    else if (art === 'ausgewichen') sfx('dodge');
+    else sfx('miss');
+    const side = next.kaempfer.A.id === next.blick.angreifer ? 'A' : 'B';
+    figures[side].userData.swing = 1;
+    if (art === 'treffer') figures[side === 'A' ? 'B' : 'A'].userData.hit = 1;
+    return;
+  }
+  if (prev.kaempfer.A.feld.x !== next.kaempfer.A.feld.x || prev.kaempfer.B.feld.x !== next.kaempfer.B.feld.x || prev.kaempfer.A.feld.y !== next.kaempfer.A.feld.y || prev.kaempfer.B.feld.y !== next.kaempfer.B.feld.y) sfx('step');
 }
 function setup(a, b) {
   Object.values(figures).forEach(g => scene.remove(g));
@@ -174,7 +195,7 @@ function render() {
   $('#log').innerHTML = S.log.slice(0, 8).map(l => `<p>${l.replace(/</g, '<')}</p>`).join('');
   const text = lastBlick?.text || 'Ziehen oder Boden antippen bewegt. Gegner antippen schlägt.';
   const wurf = (text.match(/Wurf (\d+)/) || [])[1] || '–';
-  $('#resolve').innerHTML = `<div class="dice">${wurf}</div><p>${text.replace(/</g, '<')}</p>`;
+  $('#resolve').innerHTML = `<div class="dice shown">${wurf}</div><p>${text.replace(/</g, '<')}</p>`;
   ['schlag', 'parieren', 'ausweichen', 'hinein', 'passen'].forEach(id => { $(`#act-${id}`).disabled = !mine() || !kannAct(id); });
   const reach = W.charakter(S.kaempfer[S.amZug].id).bewegung;
   moveRing.visible = mine();
@@ -204,17 +225,29 @@ W.CHARAKTERE.forEach(c => {
 function paintPicks() { document.querySelectorAll('.pick').forEach(p => { p.classList.toggle('onA', p.dataset.id === pickA); p.classList.toggle('onB', p.dataset.id === pickB); }); }
 $('#lobby').onclick = e => { const b = e.target.closest('[data-map]'); if (b) setMap(b.dataset.map); };
 $('#seat').onclick = e => { hotseat = !hotseat; e.target.classList.toggle('on', hotseat); };
-$('#start').onclick = () => { if (pickA === pickB) pickB = W.CHARAKTERE.find(c => c.id !== pickA).id; $('#lobby').hidden = true; setup(pickA, pickB); };
+$('#start').onclick = () => { sfx('click'); if (pickA === pickB) pickB = W.CHARAKTERE.find(c => c.id !== pickA).id; $('#lobby').hidden = true; setup(pickA, pickB); };
 $('#again').onclick = () => { $('#result').hidden = true; $('#lobby').hidden = false; };
+$('#mute').onclick = e => { e.target.textContent = toggleMute() ? 'Ton aus' : 'Ton an'; };
 paintPicks(); setMap('halle');
 
 addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
 renderer.setAnimationLoop(() => {
-  Object.values(figures).forEach(g => {
+  const time = performance.now() / 1000;
+  torches.forEach((l, i) => { l.intensity = 7 + Math.sin(time * 9 + i) * 1.4; });
+  moveRing.rotation.z = time * 0.4;
+  Object.entries(figures).forEach(([side, g]) => {
     if (!g.userData.goal) return;
+    const moving = g.position.distanceTo(g.userData.goal) > 0.08;
     g.position.lerp(g.userData.goal, 0.18);
+    g.position.y = moving ? Math.abs(Math.sin(time * 10)) * 0.12 : Math.sin(time * 1.6 + side.length) * 0.03;
+    g.userData.swing = Math.max(0, (g.userData.swing || 0) - 0.035);
+    g.userData.hit = Math.max(0, (g.userData.hit || 0) - 0.04);
+    const down = S && S.kaempfer[side].liegt ? 1.15 : 0;
+    g.rotation.z = Math.sin(g.userData.swing * Math.PI) * 0.7;
+    g.rotation.x = down + g.userData.hit * 0.45;
     g.userData.banner.lookAt(camera.position);
   });
+  if (Object.values(figures).some(g => g.userData.hit > 0.7)) camera.position.x += (Math.random() - 0.5) * 0.08;
   controls.update();
   renderer.render(scene, camera);
 });

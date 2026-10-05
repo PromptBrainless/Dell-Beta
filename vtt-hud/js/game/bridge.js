@@ -1,5 +1,6 @@
 /* Brücke HUD <-> Kampf-Engine. Workshop-ZIPs bleiben unangetastet; hier läuft das aktuelle HUD. */
 import * as W from './w100.js';
+import { sfx } from './sfx.js';
 const { neuerKampf, kann, bewegen, makro, abwehrWaehlen, passen, bot, laufFelder, schlagFelder, charakter, bedroht, formName, AKTIONSPUNKTE } = W;
 const PX = PX_PER_FELD, F = n => n * PX, pos = f => ({ x: f.x * PX + PX / 2, y: f.y * PX + PX / 2 });
 const WAFFE = { brecher: 'hammer', laeuferin: 'kurzschwert', archivar: 'kette', waechter: 'speer', jaeger: 'bogen' };
@@ -89,6 +90,7 @@ function apply(next) {
   const prev = S;
   if (S.amZug === 'B' && next.amZug === 'A' && !next.vorbei) round++;
   S = next; if (S.blick) lastBlick = S.blick;
+  cue(prev, S);
   floats(prev, S);
   render();
   if (S.vorbei) showResult();
@@ -208,6 +210,19 @@ function showResult() {
   $('#resultTitle').textContent = S.sieger === 'A' || hotseat ? `${name} steht` : 'Niederlage';
   $('#resultText').textContent = S.log[0] || `Sieger: ${name}.`;
   result.hidden = false;
+}
+function cue(prev, next) {
+  if (next.vorbei && !prev.vorbei) { sfx(next.sieger === 'A' || hotseat ? 'win' : 'lose'); return; }
+  if (next.blick && next.blick !== prev.blick) {
+    sfx('dice'); sfx('swing');
+    const art = next.blick.art;
+    sfx(art === 'treffer' ? 'hit' : art === 'pariert' ? 'parry' : art === 'ausgewichen' ? 'dodge' : 'miss');
+    const side = next.kaempfer.A.id === next.blick.angreifer ? 'A' : 'B';
+    tokenManager.get(side)?.el.classList.add('swing');
+    setTimeout(() => tokenManager.get(side)?.el.classList.remove('swing'), 360);
+    return;
+  }
+  if (prev.kaempfer.A.feld.x !== next.kaempfer.A.feld.x || prev.kaempfer.B.feld.x !== next.kaempfer.B.feld.x || prev.kaempfer.A.feld.y !== next.kaempfer.A.feld.y || prev.kaempfer.B.feld.y !== next.kaempfer.B.feld.y) sfx('step');
 }
 function floats(prev, next) {
   ['A', 'B'].forEach(s => {
