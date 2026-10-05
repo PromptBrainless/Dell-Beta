@@ -1,11 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "assets": [
     {
       "id": "art:archivar:ausweichen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/archivar/ausweichen.jpg"
+        "1x": "assets/art/archivar/ausweichen.jpg",
+        "1x-avif": "assets/art/archivar/ausweichen@1x.avif",
+        "1x-webp": "assets/art/archivar/ausweichen@1x.webp",
+        "2x": "assets/art/archivar/ausweichen@2x.jpg",
+        "2x-avif": "assets/art/archivar/ausweichen@2x.avif",
+        "2x-webp": "assets/art/archivar/ausweichen@2x.webp",
+        "3x-avif": "assets/art/archivar/ausweichen@3x.avif",
+        "3x-webp": "assets/art/archivar/ausweichen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -20,7 +27,14 @@
       "id": "art:archivar:block",
       "layer": 9,
       "files": {
-        "1x": "assets/art/archivar/block.jpg"
+        "1x": "assets/art/archivar/block.jpg",
+        "1x-avif": "assets/art/archivar/block@1x.avif",
+        "1x-webp": "assets/art/archivar/block@1x.webp",
+        "2x": "assets/art/archivar/block@2x.jpg",
+        "2x-avif": "assets/art/archivar/block@2x.avif",
+        "2x-webp": "assets/art/archivar/block@2x.webp",
+        "3x-avif": "assets/art/archivar/block@3x.avif",
+        "3x-webp": "assets/art/archivar/block@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -35,7 +49,14 @@
       "id": "art:archivar:bogen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/archivar/bogen.jpg"
+        "1x": "assets/art/archivar/bogen.jpg",
+        "1x-avif": "assets/art/archivar/bogen@1x.avif",
+        "1x-webp": "assets/art/archivar/bogen@1x.webp",
+        "2x": "assets/art/archivar/bogen@2x.jpg",
+        "2x-avif": "assets/art/archivar/bogen@2x.avif",
+        "2x-webp": "assets/art/archivar/bogen@2x.webp",
+        "3x-avif": "assets/art/archivar/bogen@3x.avif",
+        "3x-webp": "assets/art/archivar/bogen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -50,7 +71,14 @@
       "id": "art:archivar:gebrochen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/archivar/gebrochen.jpg"
+        "1x": "assets/art/archivar/gebrochen.jpg",
+        "1x-avif": "assets/art/archivar/gebrochen@1x.avif",
+        "1x-webp": "assets/art/archivar/gebrochen@1x.webp",
+        "2x": "assets/art/archivar/gebrochen@2x.jpg",
+        "2x-avif": "assets/art/archivar/gebrochen@2x.avif",
+        "2x-webp": "assets/art/archivar/gebrochen@2x.webp",
+        "3x-avif": "assets/art/archivar/gebrochen@3x.avif",
+        "3x-webp": "assets/art/archivar/gebrochen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -65,7 +93,14 @@
       "id": "art:archivar:hammer",
       "layer": 9,
       "files": {
-        "1x": "assets/art/archivar/hammer.jpg"
+        "1x": "assets/art/archivar/hammer.jpg",
+        "1x-avif": "assets/art/archivar/hammer@1x.avif",
+        "1x-webp": "assets/art/archivar/hammer@1x.webp",
+        "2x": "assets/art/archivar/hammer@2x.jpg",
+        "2x-avif": "assets/art/archivar/hammer@2x.avif",
+        "2x-webp": "assets/art/archivar/hammer@2x.webp",
+        "3x-avif": "assets/art/archivar/hammer@3x.avif",
+        "3x-webp": "assets/art/archivar/hammer@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -80,7 +115,14 @@
       "id": "art:archivar:kette",
       "layer": 9,
       "files": {
-        "1x": "assets/art/archivar/kette.jpg"
+        "1x": "assets/art/archivar/kette.jpg",
+        "1x-avif": "assets/art/archivar/kette@1x.avif",
+        "1x-webp": "assets/art/archivar/kette@1x.webp",
+        "2x": "assets/art/archivar/kette@2x.jpg",
+        "2x-avif": "assets/art/archivar/kette@2x.avif",
+        "2x-webp": "assets/art/archivar/kette@2x.webp",
+        "3x-avif": "assets/art/archivar/kette@3x.avif",
+        "3x-webp": "assets/art/archivar/kette@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -95,7 +137,14 @@
       "id": "art:archivar:kurzschwert",
       "layer": 9,
       "files": {
-        "1x": "assets/art/archivar/kurzschwert.jpg"
+        "1x": "assets/art/archivar/kurzschwert.jpg",
+        "1x-avif": "assets/art/archivar/kurzschwert@1x.avif",
+        "1x-webp": "assets/art/archivar/kurzschwert@1x.webp",
+        "2x": "assets/art/archivar/kurzschwert@2x.jpg",
+        "2x-avif": "assets/art/archivar/kurzschwert@2x.avif",
+        "2x-webp": "assets/art/archivar/kurzschwert@2x.webp",
+        "3x-avif": "assets/art/archivar/kurzschwert@3x.avif",
+        "3x-webp": "assets/art/archivar/kurzschwert@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -110,7 +159,14 @@
       "id": "art:archivar:offen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/archivar/offen.jpg"
+        "1x": "assets/art/archivar/offen.jpg",
+        "1x-avif": "assets/art/archivar/offen@1x.avif",
+        "1x-webp": "assets/art/archivar/offen@1x.webp",
+        "2x": "assets/art/archivar/offen@2x.jpg",
+        "2x-avif": "assets/art/archivar/offen@2x.avif",
+        "2x-webp": "assets/art/archivar/offen@2x.webp",
+        "3x-avif": "assets/art/archivar/offen@3x.avif",
+        "3x-webp": "assets/art/archivar/offen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -125,7 +181,14 @@
       "id": "art:archivar:speer",
       "layer": 9,
       "files": {
-        "1x": "assets/art/archivar/speer.jpg"
+        "1x": "assets/art/archivar/speer.jpg",
+        "1x-avif": "assets/art/archivar/speer@1x.avif",
+        "1x-webp": "assets/art/archivar/speer@1x.webp",
+        "2x": "assets/art/archivar/speer@2x.jpg",
+        "2x-avif": "assets/art/archivar/speer@2x.avif",
+        "2x-webp": "assets/art/archivar/speer@2x.webp",
+        "3x-avif": "assets/art/archivar/speer@3x.avif",
+        "3x-webp": "assets/art/archivar/speer@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -140,7 +203,14 @@
       "id": "art:brecher:ausweichen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/brecher/ausweichen.jpg"
+        "1x": "assets/art/brecher/ausweichen.jpg",
+        "1x-avif": "assets/art/brecher/ausweichen@1x.avif",
+        "1x-webp": "assets/art/brecher/ausweichen@1x.webp",
+        "2x": "assets/art/brecher/ausweichen@2x.jpg",
+        "2x-avif": "assets/art/brecher/ausweichen@2x.avif",
+        "2x-webp": "assets/art/brecher/ausweichen@2x.webp",
+        "3x-avif": "assets/art/brecher/ausweichen@3x.avif",
+        "3x-webp": "assets/art/brecher/ausweichen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -155,7 +225,14 @@
       "id": "art:brecher:block",
       "layer": 9,
       "files": {
-        "1x": "assets/art/brecher/block.jpg"
+        "1x": "assets/art/brecher/block.jpg",
+        "1x-avif": "assets/art/brecher/block@1x.avif",
+        "1x-webp": "assets/art/brecher/block@1x.webp",
+        "2x": "assets/art/brecher/block@2x.jpg",
+        "2x-avif": "assets/art/brecher/block@2x.avif",
+        "2x-webp": "assets/art/brecher/block@2x.webp",
+        "3x-avif": "assets/art/brecher/block@3x.avif",
+        "3x-webp": "assets/art/brecher/block@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -170,7 +247,14 @@
       "id": "art:brecher:bogen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/brecher/bogen.jpg"
+        "1x": "assets/art/brecher/bogen.jpg",
+        "1x-avif": "assets/art/brecher/bogen@1x.avif",
+        "1x-webp": "assets/art/brecher/bogen@1x.webp",
+        "2x": "assets/art/brecher/bogen@2x.jpg",
+        "2x-avif": "assets/art/brecher/bogen@2x.avif",
+        "2x-webp": "assets/art/brecher/bogen@2x.webp",
+        "3x-avif": "assets/art/brecher/bogen@3x.avif",
+        "3x-webp": "assets/art/brecher/bogen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -185,7 +269,14 @@
       "id": "art:brecher:gebrochen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/brecher/gebrochen.jpg"
+        "1x": "assets/art/brecher/gebrochen.jpg",
+        "1x-avif": "assets/art/brecher/gebrochen@1x.avif",
+        "1x-webp": "assets/art/brecher/gebrochen@1x.webp",
+        "2x": "assets/art/brecher/gebrochen@2x.jpg",
+        "2x-avif": "assets/art/brecher/gebrochen@2x.avif",
+        "2x-webp": "assets/art/brecher/gebrochen@2x.webp",
+        "3x-avif": "assets/art/brecher/gebrochen@3x.avif",
+        "3x-webp": "assets/art/brecher/gebrochen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -200,7 +291,14 @@
       "id": "art:brecher:hammer",
       "layer": 9,
       "files": {
-        "1x": "assets/art/brecher/hammer.jpg"
+        "1x": "assets/art/brecher/hammer.jpg",
+        "1x-avif": "assets/art/brecher/hammer@1x.avif",
+        "1x-webp": "assets/art/brecher/hammer@1x.webp",
+        "2x": "assets/art/brecher/hammer@2x.jpg",
+        "2x-avif": "assets/art/brecher/hammer@2x.avif",
+        "2x-webp": "assets/art/brecher/hammer@2x.webp",
+        "3x-avif": "assets/art/brecher/hammer@3x.avif",
+        "3x-webp": "assets/art/brecher/hammer@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -215,7 +313,14 @@
       "id": "art:brecher:kette",
       "layer": 9,
       "files": {
-        "1x": "assets/art/brecher/kette.jpg"
+        "1x": "assets/art/brecher/kette.jpg",
+        "1x-avif": "assets/art/brecher/kette@1x.avif",
+        "1x-webp": "assets/art/brecher/kette@1x.webp",
+        "2x": "assets/art/brecher/kette@2x.jpg",
+        "2x-avif": "assets/art/brecher/kette@2x.avif",
+        "2x-webp": "assets/art/brecher/kette@2x.webp",
+        "3x-avif": "assets/art/brecher/kette@3x.avif",
+        "3x-webp": "assets/art/brecher/kette@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -230,7 +335,14 @@
       "id": "art:brecher:kurzschwert",
       "layer": 9,
       "files": {
-        "1x": "assets/art/brecher/kurzschwert.jpg"
+        "1x": "assets/art/brecher/kurzschwert.jpg",
+        "1x-avif": "assets/art/brecher/kurzschwert@1x.avif",
+        "1x-webp": "assets/art/brecher/kurzschwert@1x.webp",
+        "2x": "assets/art/brecher/kurzschwert@2x.jpg",
+        "2x-avif": "assets/art/brecher/kurzschwert@2x.avif",
+        "2x-webp": "assets/art/brecher/kurzschwert@2x.webp",
+        "3x-avif": "assets/art/brecher/kurzschwert@3x.avif",
+        "3x-webp": "assets/art/brecher/kurzschwert@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -245,7 +357,14 @@
       "id": "art:brecher:offen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/brecher/offen.jpg"
+        "1x": "assets/art/brecher/offen.jpg",
+        "1x-avif": "assets/art/brecher/offen@1x.avif",
+        "1x-webp": "assets/art/brecher/offen@1x.webp",
+        "2x": "assets/art/brecher/offen@2x.jpg",
+        "2x-avif": "assets/art/brecher/offen@2x.avif",
+        "2x-webp": "assets/art/brecher/offen@2x.webp",
+        "3x-avif": "assets/art/brecher/offen@3x.avif",
+        "3x-webp": "assets/art/brecher/offen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -260,7 +379,14 @@
       "id": "art:brecher:speer",
       "layer": 9,
       "files": {
-        "1x": "assets/art/brecher/speer.jpg"
+        "1x": "assets/art/brecher/speer.jpg",
+        "1x-avif": "assets/art/brecher/speer@1x.avif",
+        "1x-webp": "assets/art/brecher/speer@1x.webp",
+        "2x": "assets/art/brecher/speer@2x.jpg",
+        "2x-avif": "assets/art/brecher/speer@2x.avif",
+        "2x-webp": "assets/art/brecher/speer@2x.webp",
+        "3x-avif": "assets/art/brecher/speer@3x.avif",
+        "3x-webp": "assets/art/brecher/speer@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -275,7 +401,14 @@
       "id": "art:jaeger:ausweichen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/jaeger/ausweichen.jpg"
+        "1x": "assets/art/jaeger/ausweichen.jpg",
+        "1x-avif": "assets/art/jaeger/ausweichen@1x.avif",
+        "1x-webp": "assets/art/jaeger/ausweichen@1x.webp",
+        "2x": "assets/art/jaeger/ausweichen@2x.jpg",
+        "2x-avif": "assets/art/jaeger/ausweichen@2x.avif",
+        "2x-webp": "assets/art/jaeger/ausweichen@2x.webp",
+        "3x-avif": "assets/art/jaeger/ausweichen@3x.avif",
+        "3x-webp": "assets/art/jaeger/ausweichen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -290,7 +423,14 @@
       "id": "art:jaeger:block",
       "layer": 9,
       "files": {
-        "1x": "assets/art/jaeger/block.jpg"
+        "1x": "assets/art/jaeger/block.jpg",
+        "1x-avif": "assets/art/jaeger/block@1x.avif",
+        "1x-webp": "assets/art/jaeger/block@1x.webp",
+        "2x": "assets/art/jaeger/block@2x.jpg",
+        "2x-avif": "assets/art/jaeger/block@2x.avif",
+        "2x-webp": "assets/art/jaeger/block@2x.webp",
+        "3x-avif": "assets/art/jaeger/block@3x.avif",
+        "3x-webp": "assets/art/jaeger/block@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -305,7 +445,14 @@
       "id": "art:jaeger:bogen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/jaeger/bogen.jpg"
+        "1x": "assets/art/jaeger/bogen.jpg",
+        "1x-avif": "assets/art/jaeger/bogen@1x.avif",
+        "1x-webp": "assets/art/jaeger/bogen@1x.webp",
+        "2x": "assets/art/jaeger/bogen@2x.jpg",
+        "2x-avif": "assets/art/jaeger/bogen@2x.avif",
+        "2x-webp": "assets/art/jaeger/bogen@2x.webp",
+        "3x-avif": "assets/art/jaeger/bogen@3x.avif",
+        "3x-webp": "assets/art/jaeger/bogen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -320,7 +467,14 @@
       "id": "art:jaeger:gebrochen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/jaeger/gebrochen.jpg"
+        "1x": "assets/art/jaeger/gebrochen.jpg",
+        "1x-avif": "assets/art/jaeger/gebrochen@1x.avif",
+        "1x-webp": "assets/art/jaeger/gebrochen@1x.webp",
+        "2x": "assets/art/jaeger/gebrochen@2x.jpg",
+        "2x-avif": "assets/art/jaeger/gebrochen@2x.avif",
+        "2x-webp": "assets/art/jaeger/gebrochen@2x.webp",
+        "3x-avif": "assets/art/jaeger/gebrochen@3x.avif",
+        "3x-webp": "assets/art/jaeger/gebrochen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -335,7 +489,14 @@
       "id": "art:jaeger:hammer",
       "layer": 9,
       "files": {
-        "1x": "assets/art/jaeger/hammer.jpg"
+        "1x": "assets/art/jaeger/hammer.jpg",
+        "1x-avif": "assets/art/jaeger/hammer@1x.avif",
+        "1x-webp": "assets/art/jaeger/hammer@1x.webp",
+        "2x": "assets/art/jaeger/hammer@2x.jpg",
+        "2x-avif": "assets/art/jaeger/hammer@2x.avif",
+        "2x-webp": "assets/art/jaeger/hammer@2x.webp",
+        "3x-avif": "assets/art/jaeger/hammer@3x.avif",
+        "3x-webp": "assets/art/jaeger/hammer@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -350,7 +511,14 @@
       "id": "art:jaeger:kette",
       "layer": 9,
       "files": {
-        "1x": "assets/art/jaeger/kette.jpg"
+        "1x": "assets/art/jaeger/kette.jpg",
+        "1x-avif": "assets/art/jaeger/kette@1x.avif",
+        "1x-webp": "assets/art/jaeger/kette@1x.webp",
+        "2x": "assets/art/jaeger/kette@2x.jpg",
+        "2x-avif": "assets/art/jaeger/kette@2x.avif",
+        "2x-webp": "assets/art/jaeger/kette@2x.webp",
+        "3x-avif": "assets/art/jaeger/kette@3x.avif",
+        "3x-webp": "assets/art/jaeger/kette@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -365,7 +533,14 @@
       "id": "art:jaeger:kurzschwert",
       "layer": 9,
       "files": {
-        "1x": "assets/art/jaeger/kurzschwert.jpg"
+        "1x": "assets/art/jaeger/kurzschwert.jpg",
+        "1x-avif": "assets/art/jaeger/kurzschwert@1x.avif",
+        "1x-webp": "assets/art/jaeger/kurzschwert@1x.webp",
+        "2x": "assets/art/jaeger/kurzschwert@2x.jpg",
+        "2x-avif": "assets/art/jaeger/kurzschwert@2x.avif",
+        "2x-webp": "assets/art/jaeger/kurzschwert@2x.webp",
+        "3x-avif": "assets/art/jaeger/kurzschwert@3x.avif",
+        "3x-webp": "assets/art/jaeger/kurzschwert@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -380,7 +555,14 @@
       "id": "art:jaeger:offen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/jaeger/offen.jpg"
+        "1x": "assets/art/jaeger/offen.jpg",
+        "1x-avif": "assets/art/jaeger/offen@1x.avif",
+        "1x-webp": "assets/art/jaeger/offen@1x.webp",
+        "2x": "assets/art/jaeger/offen@2x.jpg",
+        "2x-avif": "assets/art/jaeger/offen@2x.avif",
+        "2x-webp": "assets/art/jaeger/offen@2x.webp",
+        "3x-avif": "assets/art/jaeger/offen@3x.avif",
+        "3x-webp": "assets/art/jaeger/offen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -395,7 +577,14 @@
       "id": "art:jaeger:speer",
       "layer": 9,
       "files": {
-        "1x": "assets/art/jaeger/speer.jpg"
+        "1x": "assets/art/jaeger/speer.jpg",
+        "1x-avif": "assets/art/jaeger/speer@1x.avif",
+        "1x-webp": "assets/art/jaeger/speer@1x.webp",
+        "2x": "assets/art/jaeger/speer@2x.jpg",
+        "2x-avif": "assets/art/jaeger/speer@2x.avif",
+        "2x-webp": "assets/art/jaeger/speer@2x.webp",
+        "3x-avif": "assets/art/jaeger/speer@3x.avif",
+        "3x-webp": "assets/art/jaeger/speer@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -410,7 +599,14 @@
       "id": "art:laeuferin:ausweichen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/laeuferin/ausweichen.jpg"
+        "1x": "assets/art/laeuferin/ausweichen.jpg",
+        "1x-avif": "assets/art/laeuferin/ausweichen@1x.avif",
+        "1x-webp": "assets/art/laeuferin/ausweichen@1x.webp",
+        "2x": "assets/art/laeuferin/ausweichen@2x.jpg",
+        "2x-avif": "assets/art/laeuferin/ausweichen@2x.avif",
+        "2x-webp": "assets/art/laeuferin/ausweichen@2x.webp",
+        "3x-avif": "assets/art/laeuferin/ausweichen@3x.avif",
+        "3x-webp": "assets/art/laeuferin/ausweichen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -425,7 +621,14 @@
       "id": "art:laeuferin:block",
       "layer": 9,
       "files": {
-        "1x": "assets/art/laeuferin/block.jpg"
+        "1x": "assets/art/laeuferin/block.jpg",
+        "1x-avif": "assets/art/laeuferin/block@1x.avif",
+        "1x-webp": "assets/art/laeuferin/block@1x.webp",
+        "2x": "assets/art/laeuferin/block@2x.jpg",
+        "2x-avif": "assets/art/laeuferin/block@2x.avif",
+        "2x-webp": "assets/art/laeuferin/block@2x.webp",
+        "3x-avif": "assets/art/laeuferin/block@3x.avif",
+        "3x-webp": "assets/art/laeuferin/block@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -440,7 +643,14 @@
       "id": "art:laeuferin:bogen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/laeuferin/bogen.jpg"
+        "1x": "assets/art/laeuferin/bogen.jpg",
+        "1x-avif": "assets/art/laeuferin/bogen@1x.avif",
+        "1x-webp": "assets/art/laeuferin/bogen@1x.webp",
+        "2x": "assets/art/laeuferin/bogen@2x.jpg",
+        "2x-avif": "assets/art/laeuferin/bogen@2x.avif",
+        "2x-webp": "assets/art/laeuferin/bogen@2x.webp",
+        "3x-avif": "assets/art/laeuferin/bogen@3x.avif",
+        "3x-webp": "assets/art/laeuferin/bogen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -455,7 +665,14 @@
       "id": "art:laeuferin:gebrochen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/laeuferin/gebrochen.jpg"
+        "1x": "assets/art/laeuferin/gebrochen.jpg",
+        "1x-avif": "assets/art/laeuferin/gebrochen@1x.avif",
+        "1x-webp": "assets/art/laeuferin/gebrochen@1x.webp",
+        "2x": "assets/art/laeuferin/gebrochen@2x.jpg",
+        "2x-avif": "assets/art/laeuferin/gebrochen@2x.avif",
+        "2x-webp": "assets/art/laeuferin/gebrochen@2x.webp",
+        "3x-avif": "assets/art/laeuferin/gebrochen@3x.avif",
+        "3x-webp": "assets/art/laeuferin/gebrochen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -470,7 +687,14 @@
       "id": "art:laeuferin:hammer",
       "layer": 9,
       "files": {
-        "1x": "assets/art/laeuferin/hammer.jpg"
+        "1x": "assets/art/laeuferin/hammer.jpg",
+        "1x-avif": "assets/art/laeuferin/hammer@1x.avif",
+        "1x-webp": "assets/art/laeuferin/hammer@1x.webp",
+        "2x": "assets/art/laeuferin/hammer@2x.jpg",
+        "2x-avif": "assets/art/laeuferin/hammer@2x.avif",
+        "2x-webp": "assets/art/laeuferin/hammer@2x.webp",
+        "3x-avif": "assets/art/laeuferin/hammer@3x.avif",
+        "3x-webp": "assets/art/laeuferin/hammer@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -485,7 +709,14 @@
       "id": "art:laeuferin:kette",
       "layer": 9,
       "files": {
-        "1x": "assets/art/laeuferin/kette.jpg"
+        "1x": "assets/art/laeuferin/kette.jpg",
+        "1x-avif": "assets/art/laeuferin/kette@1x.avif",
+        "1x-webp": "assets/art/laeuferin/kette@1x.webp",
+        "2x": "assets/art/laeuferin/kette@2x.jpg",
+        "2x-avif": "assets/art/laeuferin/kette@2x.avif",
+        "2x-webp": "assets/art/laeuferin/kette@2x.webp",
+        "3x-avif": "assets/art/laeuferin/kette@3x.avif",
+        "3x-webp": "assets/art/laeuferin/kette@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -500,7 +731,14 @@
       "id": "art:laeuferin:kurzschwert",
       "layer": 9,
       "files": {
-        "1x": "assets/art/laeuferin/kurzschwert.jpg"
+        "1x": "assets/art/laeuferin/kurzschwert.jpg",
+        "1x-avif": "assets/art/laeuferin/kurzschwert@1x.avif",
+        "1x-webp": "assets/art/laeuferin/kurzschwert@1x.webp",
+        "2x": "assets/art/laeuferin/kurzschwert@2x.jpg",
+        "2x-avif": "assets/art/laeuferin/kurzschwert@2x.avif",
+        "2x-webp": "assets/art/laeuferin/kurzschwert@2x.webp",
+        "3x-avif": "assets/art/laeuferin/kurzschwert@3x.avif",
+        "3x-webp": "assets/art/laeuferin/kurzschwert@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -515,7 +753,14 @@
       "id": "art:laeuferin:offen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/laeuferin/offen.jpg"
+        "1x": "assets/art/laeuferin/offen.jpg",
+        "1x-avif": "assets/art/laeuferin/offen@1x.avif",
+        "1x-webp": "assets/art/laeuferin/offen@1x.webp",
+        "2x": "assets/art/laeuferin/offen@2x.jpg",
+        "2x-avif": "assets/art/laeuferin/offen@2x.avif",
+        "2x-webp": "assets/art/laeuferin/offen@2x.webp",
+        "3x-avif": "assets/art/laeuferin/offen@3x.avif",
+        "3x-webp": "assets/art/laeuferin/offen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -530,7 +775,14 @@
       "id": "art:laeuferin:speer",
       "layer": 9,
       "files": {
-        "1x": "assets/art/laeuferin/speer.jpg"
+        "1x": "assets/art/laeuferin/speer.jpg",
+        "1x-avif": "assets/art/laeuferin/speer@1x.avif",
+        "1x-webp": "assets/art/laeuferin/speer@1x.webp",
+        "2x": "assets/art/laeuferin/speer@2x.jpg",
+        "2x-avif": "assets/art/laeuferin/speer@2x.avif",
+        "2x-webp": "assets/art/laeuferin/speer@2x.webp",
+        "3x-avif": "assets/art/laeuferin/speer@3x.avif",
+        "3x-webp": "assets/art/laeuferin/speer@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -545,7 +797,14 @@
       "id": "art:waechter:ausweichen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/waechter/ausweichen.jpg"
+        "1x": "assets/art/waechter/ausweichen.jpg",
+        "1x-avif": "assets/art/waechter/ausweichen@1x.avif",
+        "1x-webp": "assets/art/waechter/ausweichen@1x.webp",
+        "2x": "assets/art/waechter/ausweichen@2x.jpg",
+        "2x-avif": "assets/art/waechter/ausweichen@2x.avif",
+        "2x-webp": "assets/art/waechter/ausweichen@2x.webp",
+        "3x-avif": "assets/art/waechter/ausweichen@3x.avif",
+        "3x-webp": "assets/art/waechter/ausweichen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -560,7 +819,14 @@
       "id": "art:waechter:block",
       "layer": 9,
       "files": {
-        "1x": "assets/art/waechter/block.jpg"
+        "1x": "assets/art/waechter/block.jpg",
+        "1x-avif": "assets/art/waechter/block@1x.avif",
+        "1x-webp": "assets/art/waechter/block@1x.webp",
+        "2x": "assets/art/waechter/block@2x.jpg",
+        "2x-avif": "assets/art/waechter/block@2x.avif",
+        "2x-webp": "assets/art/waechter/block@2x.webp",
+        "3x-avif": "assets/art/waechter/block@3x.avif",
+        "3x-webp": "assets/art/waechter/block@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -575,7 +841,14 @@
       "id": "art:waechter:bogen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/waechter/bogen.jpg"
+        "1x": "assets/art/waechter/bogen.jpg",
+        "1x-avif": "assets/art/waechter/bogen@1x.avif",
+        "1x-webp": "assets/art/waechter/bogen@1x.webp",
+        "2x": "assets/art/waechter/bogen@2x.jpg",
+        "2x-avif": "assets/art/waechter/bogen@2x.avif",
+        "2x-webp": "assets/art/waechter/bogen@2x.webp",
+        "3x-avif": "assets/art/waechter/bogen@3x.avif",
+        "3x-webp": "assets/art/waechter/bogen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -590,7 +863,14 @@
       "id": "art:waechter:gebrochen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/waechter/gebrochen.jpg"
+        "1x": "assets/art/waechter/gebrochen.jpg",
+        "1x-avif": "assets/art/waechter/gebrochen@1x.avif",
+        "1x-webp": "assets/art/waechter/gebrochen@1x.webp",
+        "2x": "assets/art/waechter/gebrochen@2x.jpg",
+        "2x-avif": "assets/art/waechter/gebrochen@2x.avif",
+        "2x-webp": "assets/art/waechter/gebrochen@2x.webp",
+        "3x-avif": "assets/art/waechter/gebrochen@3x.avif",
+        "3x-webp": "assets/art/waechter/gebrochen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -605,7 +885,14 @@
       "id": "art:waechter:hammer",
       "layer": 9,
       "files": {
-        "1x": "assets/art/waechter/hammer.jpg"
+        "1x": "assets/art/waechter/hammer.jpg",
+        "1x-avif": "assets/art/waechter/hammer@1x.avif",
+        "1x-webp": "assets/art/waechter/hammer@1x.webp",
+        "2x": "assets/art/waechter/hammer@2x.jpg",
+        "2x-avif": "assets/art/waechter/hammer@2x.avif",
+        "2x-webp": "assets/art/waechter/hammer@2x.webp",
+        "3x-avif": "assets/art/waechter/hammer@3x.avif",
+        "3x-webp": "assets/art/waechter/hammer@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -620,7 +907,14 @@
       "id": "art:waechter:kette",
       "layer": 9,
       "files": {
-        "1x": "assets/art/waechter/kette.jpg"
+        "1x": "assets/art/waechter/kette.jpg",
+        "1x-avif": "assets/art/waechter/kette@1x.avif",
+        "1x-webp": "assets/art/waechter/kette@1x.webp",
+        "2x": "assets/art/waechter/kette@2x.jpg",
+        "2x-avif": "assets/art/waechter/kette@2x.avif",
+        "2x-webp": "assets/art/waechter/kette@2x.webp",
+        "3x-avif": "assets/art/waechter/kette@3x.avif",
+        "3x-webp": "assets/art/waechter/kette@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -635,7 +929,14 @@
       "id": "art:waechter:kurzschwert",
       "layer": 9,
       "files": {
-        "1x": "assets/art/waechter/kurzschwert.jpg"
+        "1x": "assets/art/waechter/kurzschwert.jpg",
+        "1x-avif": "assets/art/waechter/kurzschwert@1x.avif",
+        "1x-webp": "assets/art/waechter/kurzschwert@1x.webp",
+        "2x": "assets/art/waechter/kurzschwert@2x.jpg",
+        "2x-avif": "assets/art/waechter/kurzschwert@2x.avif",
+        "2x-webp": "assets/art/waechter/kurzschwert@2x.webp",
+        "3x-avif": "assets/art/waechter/kurzschwert@3x.avif",
+        "3x-webp": "assets/art/waechter/kurzschwert@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -650,7 +951,14 @@
       "id": "art:waechter:offen",
       "layer": 9,
       "files": {
-        "1x": "assets/art/waechter/offen.jpg"
+        "1x": "assets/art/waechter/offen.jpg",
+        "1x-avif": "assets/art/waechter/offen@1x.avif",
+        "1x-webp": "assets/art/waechter/offen@1x.webp",
+        "2x": "assets/art/waechter/offen@2x.jpg",
+        "2x-avif": "assets/art/waechter/offen@2x.avif",
+        "2x-webp": "assets/art/waechter/offen@2x.webp",
+        "3x-avif": "assets/art/waechter/offen@3x.avif",
+        "3x-webp": "assets/art/waechter/offen@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -665,7 +973,14 @@
       "id": "art:waechter:speer",
       "layer": 9,
       "files": {
-        "1x": "assets/art/waechter/speer.jpg"
+        "1x": "assets/art/waechter/speer.jpg",
+        "1x-avif": "assets/art/waechter/speer@1x.avif",
+        "1x-webp": "assets/art/waechter/speer@1x.webp",
+        "2x": "assets/art/waechter/speer@2x.jpg",
+        "2x-avif": "assets/art/waechter/speer@2x.avif",
+        "2x-webp": "assets/art/waechter/speer@2x.webp",
+        "3x-avif": "assets/art/waechter/speer@3x.avif",
+        "3x-webp": "assets/art/waechter/speer@3x.webp"
       },
       "anchor": {
         "x": 0.5,
@@ -677,10 +992,157 @@
       }
     },
     {
+      "id": "icons:arm",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/arm-24.png",
+        "32": "assets/icons/raster/arm-32.png",
+        "48": "assets/icons/raster/arm-48.png",
+        "svg": "assets/icons/arm.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:ausweichen",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/ausweichen-24.png",
+        "32": "assets/icons/raster/ausweichen-32.png",
+        "48": "assets/icons/raster/ausweichen-48.png",
+        "svg": "assets/icons/ausweichen.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:bein",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/bein-24.png",
+        "32": "assets/icons/raster/bein-32.png",
+        "48": "assets/icons/raster/bein-48.png",
+        "svg": "assets/icons/bein.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:bewusstlos",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/bewusstlos-24.png",
+        "32": "assets/icons/raster/bewusstlos-32.png",
+        "48": "assets/icons/raster/bewusstlos-48.png",
+        "svg": "assets/icons/bewusstlos.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:blutung",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/blutung-24.png",
+        "32": "assets/icons/raster/blutung-32.png",
+        "48": "assets/icons/raster/blutung-48.png",
+        "svg": "assets/icons/blutung.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
       "id": "icons:dash",
       "layer": 10,
       "files": {
-        "1x": "assets/icons/dash.svg"
+        "24": "assets/icons/raster/dash-24.png",
+        "32": "assets/icons/raster/dash-32.png",
+        "48": "assets/icons/raster/dash-48.png",
+        "svg": "assets/icons/dash.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:liegt",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/liegt-24.png",
+        "32": "assets/icons/raster/liegt-32.png",
+        "48": "assets/icons/raster/liegt-48.png",
+        "svg": "assets/icons/liegt.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:parieren",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/parieren-24.png",
+        "32": "assets/icons/raster/parieren-32.png",
+        "48": "assets/icons/raster/parieren-48.png",
+        "svg": "assets/icons/parieren.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:passen",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/passen-24.png",
+        "32": "assets/icons/raster/passen-32.png",
+        "48": "assets/icons/raster/passen-48.png",
+        "svg": "assets/icons/passen.svg"
       },
       "anchor": {
         "x": 0.5,
@@ -695,7 +1157,10 @@
       "id": "icons:poisoned",
       "layer": 10,
       "files": {
-        "1x": "assets/icons/poisoned.svg"
+        "24": "assets/icons/raster/poisoned-24.png",
+        "32": "assets/icons/raster/poisoned-32.png",
+        "48": "assets/icons/raster/poisoned-48.png",
+        "svg": "assets/icons/poisoned.svg"
       },
       "anchor": {
         "x": 0.5,
@@ -710,7 +1175,28 @@
       "id": "icons:potion",
       "layer": 10,
       "files": {
-        "1x": "assets/icons/potion.svg"
+        "24": "assets/icons/raster/potion-24.png",
+        "32": "assets/icons/raster/potion-32.png",
+        "48": "assets/icons/raster/potion-48.png",
+        "svg": "assets/icons/potion.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:schlagen",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/schlagen-24.png",
+        "32": "assets/icons/raster/schlagen-32.png",
+        "48": "assets/icons/raster/schlagen-48.png",
+        "svg": "assets/icons/schlagen.svg"
       },
       "anchor": {
         "x": 0.5,
@@ -725,7 +1211,10 @@
       "id": "icons:shield",
       "layer": 10,
       "files": {
-        "1x": "assets/icons/shield.svg"
+        "24": "assets/icons/raster/shield-24.png",
+        "32": "assets/icons/raster/shield-32.png",
+        "48": "assets/icons/raster/shield-48.png",
+        "svg": "assets/icons/shield.svg"
       },
       "anchor": {
         "x": 0.5,
@@ -740,7 +1229,10 @@
       "id": "icons:spell",
       "layer": 10,
       "files": {
-        "1x": "assets/icons/spell.svg"
+        "24": "assets/icons/raster/spell-24.png",
+        "32": "assets/icons/raster/spell-32.png",
+        "48": "assets/icons/raster/spell-48.png",
+        "svg": "assets/icons/spell.svg"
       },
       "anchor": {
         "x": 0.5,
@@ -755,7 +1247,10 @@
       "id": "icons:stunned",
       "layer": 10,
       "files": {
-        "1x": "assets/icons/stunned.svg"
+        "24": "assets/icons/raster/stunned-24.png",
+        "32": "assets/icons/raster/stunned-32.png",
+        "48": "assets/icons/raster/stunned-48.png",
+        "svg": "assets/icons/stunned.svg"
       },
       "anchor": {
         "x": 0.5,
@@ -770,7 +1265,64 @@
       "id": "icons:sword",
       "layer": 10,
       "files": {
-        "1x": "assets/icons/sword.svg"
+        "24": "assets/icons/raster/sword-24.png",
+        "32": "assets/icons/raster/sword-32.png",
+        "48": "assets/icons/raster/sword-48.png",
+        "svg": "assets/icons/sword.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:vorruecken",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/vorruecken-24.png",
+        "32": "assets/icons/raster/vorruecken-32.png",
+        "48": "assets/icons/raster/vorruecken-48.png",
+        "svg": "assets/icons/vorruecken.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:vorteil",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/vorteil-24.png",
+        "32": "assets/icons/raster/vorteil-32.png",
+        "48": "assets/icons/raster/vorteil-48.png",
+        "svg": "assets/icons/vorteil.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "id": "icons:waffe",
+      "layer": 10,
+      "files": {
+        "24": "assets/icons/raster/waffe-24.png",
+        "32": "assets/icons/raster/waffe-32.png",
+        "48": "assets/icons/raster/waffe-48.png",
+        "svg": "assets/icons/waffe.svg"
       },
       "anchor": {
         "x": 0.5,
@@ -785,135 +1337,258 @@
       "id": "portraits:archivar",
       "layer": 2,
       "files": {
-        "1x": "assets/portraits/archivar.jpg"
+        "256": "assets/portraits/archivar@256.png",
+        "512": "assets/portraits/archivar@512.png",
+        "768": "assets/portraits/archivar@768.png",
+        "round": "assets/portraits/archivar.png",
+        "square": "assets/portraits/square/archivar@512.png"
       },
       "anchor": {
         "x": 0.5,
         "y": 0.5
       },
       "size": {
-        "width": 256,
-        "height": 256
+        "width": 512,
+        "height": 512
       }
     },
     {
       "id": "portraits:brecher",
       "layer": 2,
       "files": {
-        "1x": "assets/portraits/brecher.jpg"
+        "256": "assets/portraits/brecher@256.png",
+        "512": "assets/portraits/brecher@512.png",
+        "768": "assets/portraits/brecher@768.png",
+        "round": "assets/portraits/brecher.png",
+        "square": "assets/portraits/square/brecher@512.png"
       },
       "anchor": {
         "x": 0.5,
         "y": 0.5
       },
       "size": {
-        "width": 256,
-        "height": 256
+        "width": 512,
+        "height": 512
       }
     },
     {
       "id": "portraits:jaeger",
       "layer": 2,
       "files": {
-        "1x": "assets/portraits/jaeger.jpg"
+        "256": "assets/portraits/jaeger@256.png",
+        "512": "assets/portraits/jaeger@512.png",
+        "768": "assets/portraits/jaeger@768.png",
+        "round": "assets/portraits/jaeger.png",
+        "square": "assets/portraits/square/jaeger@512.png"
       },
       "anchor": {
         "x": 0.5,
         "y": 0.5
       },
       "size": {
-        "width": 256,
-        "height": 256
+        "width": 512,
+        "height": 512
       }
     },
     {
       "id": "portraits:laeuferin",
       "layer": 2,
       "files": {
-        "1x": "assets/portraits/laeuferin.jpg"
+        "256": "assets/portraits/laeuferin@256.png",
+        "512": "assets/portraits/laeuferin@512.png",
+        "768": "assets/portraits/laeuferin@768.png",
+        "round": "assets/portraits/laeuferin.png",
+        "square": "assets/portraits/square/laeuferin@512.png"
       },
       "anchor": {
         "x": 0.5,
         "y": 0.5
       },
       "size": {
-        "width": 256,
-        "height": 256
+        "width": 512,
+        "height": 512
       }
     },
     {
       "id": "portraits:waechter",
       "layer": 2,
       "files": {
-        "1x": "assets/portraits/waechter.jpg"
+        "256": "assets/portraits/waechter@256.png",
+        "512": "assets/portraits/waechter@512.png",
+        "768": "assets/portraits/waechter@768.png",
+        "round": "assets/portraits/waechter.png",
+        "square": "assets/portraits/square/waechter@512.png"
       },
       "anchor": {
         "x": 0.5,
         "y": 0.5
       },
       "size": {
-        "width": 256,
-        "height": 256
+        "width": 512,
+        "height": 512
       }
     },
     {
       "id": "textures:bruch",
       "layer": 0,
       "files": {
-        "1x": "assets/textures/bruch.jpg"
+        "1x": "assets/textures/bruch.jpg",
+        "1x-avif": "assets/textures/bruch@1x.avif",
+        "1x-webp": "assets/textures/bruch@1x.webp",
+        "2x": "assets/textures/bruch@2x.jpg",
+        "2x-avif": "assets/textures/bruch@2x.avif",
+        "2x-webp": "assets/textures/bruch@2x.webp",
+        "3x-avif": "assets/textures/bruch@3x.avif",
+        "3x-webp": "assets/textures/bruch@3x.webp"
       },
       "anchor": {
         "x": 0.5,
         "y": 0.5
       },
       "size": {
-        "width": 640,
-        "height": 360
+        "width": 1792,
+        "height": 1008
       }
     },
     {
       "id": "textures:funken",
       "layer": 0,
       "files": {
-        "1x": "assets/textures/funken.jpg"
+        "1x": "assets/textures/funken.jpg",
+        "1x-avif": "assets/textures/funken@1x.avif",
+        "1x-webp": "assets/textures/funken@1x.webp",
+        "2x": "assets/textures/funken@2x.jpg",
+        "2x-avif": "assets/textures/funken@2x.avif",
+        "2x-webp": "assets/textures/funken@2x.webp",
+        "3x-avif": "assets/textures/funken@3x.avif",
+        "3x-webp": "assets/textures/funken@3x.webp"
       },
       "anchor": {
         "x": 0.5,
         "y": 0.5
       },
       "size": {
-        "width": 640,
-        "height": 360
+        "width": 1792,
+        "height": 1008
       }
     },
     {
       "id": "textures:halle",
       "layer": 0,
       "files": {
-        "1x": "assets/textures/halle.jpg"
+        "1x": "assets/textures/halle.jpg",
+        "1x-avif": "assets/textures/halle@1x.avif",
+        "1x-webp": "assets/textures/halle@1x.webp",
+        "2x": "assets/textures/halle@2x.jpg",
+        "2x-avif": "assets/textures/halle@2x.avif",
+        "2x-webp": "assets/textures/halle@2x.webp",
+        "3x-avif": "assets/textures/halle@3x.avif",
+        "3x-webp": "assets/textures/halle@3x.webp"
       },
       "anchor": {
         "x": 0.5,
         "y": 0.5
       },
       "size": {
-        "width": 640,
-        "height": 360
+        "width": 1792,
+        "height": 1008
       }
     },
     {
       "id": "textures:nebel",
       "layer": 0,
       "files": {
-        "1x": "assets/textures/nebel.jpg"
+        "1x": "assets/textures/nebel.jpg",
+        "1x-avif": "assets/textures/nebel@1x.avif",
+        "1x-webp": "assets/textures/nebel@1x.webp",
+        "2x": "assets/textures/nebel@2x.jpg",
+        "2x-avif": "assets/textures/nebel@2x.avif",
+        "2x-webp": "assets/textures/nebel@2x.webp",
+        "3x-avif": "assets/textures/nebel@3x.avif",
+        "3x-webp": "assets/textures/nebel@3x.webp"
       },
       "anchor": {
         "x": 0.5,
         "y": 0.5
       },
       "size": {
-        "width": 640,
-        "height": 360
+        "width": 1792,
+        "height": 1008
+      }
+    },
+    {
+      "id": "ui:frame-bronze",
+      "layer": 9,
+      "files": {
+        "svg": "assets/ui/frame-bronze.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 96,
+        "height": 96
+      }
+    },
+    {
+      "id": "ui:frame-metal",
+      "layer": 9,
+      "files": {
+        "svg": "assets/ui/frame-metal.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 96,
+        "height": 96
+      }
+    },
+    {
+      "id": "ui:glass",
+      "layer": 9,
+      "files": {
+        "svg": "assets/ui/glass.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 96,
+        "height": 96
+      }
+    },
+    {
+      "id": "ui:leather",
+      "layer": 9,
+      "files": {
+        "svg": "assets/ui/leather.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 96,
+        "height": 96
+      }
+    },
+    {
+      "id": "ui:rivet",
+      "layer": 9,
+      "files": {
+        "svg": "assets/ui/rivet.svg"
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "size": {
+        "width": 96,
+        "height": 96
       }
     }
   ]

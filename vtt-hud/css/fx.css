@@ -1,0 +1,54 @@
+@property --ring-shift {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+.token-ring { border: none; box-shadow: none; background: none; overflow: visible; }
+.token-ring svg { width: 100%; height: 100%; overflow: visible; display: block; }
+.token-ring.friendly { --ring: var(--friendly, #4ade80); }
+.token-ring.neutral { --ring: var(--neutral, #fbbf24); }
+.token-ring.hostile { --ring: var(--hostile, #f87171); }
+.token-ring.secret { --ring: var(--secret, #a78bfa); }
+.ring-track, .ring-dash { fill: none; }
+.ring-track { stroke: color-mix(in srgb, var(--ring) 28%, transparent); stroke-width: 3; }
+.ring-dash {
+  stroke: var(--ring); stroke-width: 3.5; stroke-linecap: round;
+  stroke-dasharray: 16 10; filter: drop-shadow(0 0 4px var(--ring));
+  animation: ringDash 7s linear infinite;
+}
+.token.active .ring-dash { animation-duration: 2.4s; }
+@keyframes ringDash { to { stroke-dashoffset: -100; } }
+.hp-tube, .ap-tube { overflow: visible; }
+.token .hp-tube { position: absolute; left: -6%; right: -6%; bottom: -12px; width: 112%; height: 12px; }
+.tube-glass { fill: rgba(8, 8, 12, .55); stroke: color-mix(in srgb, var(--gold) 70%, #fff); stroke-width: 1; }
+.tube-fill, .tube-ghost { transform-box: fill-box; transform-origin: left center; transition: transform .45s ease; }
+.tube-fill { fill: url(#none); fill: color-mix(in srgb, #b91c1c 70%, #fecaca); }
+.ap-tube .tube-fill { fill: color-mix(in srgb, var(--gold) 80%, #fff6d0); }
+.tube-ghost { fill: rgba(248, 113, 113, .35); transition-duration: .9s; }
+.tube-shine { fill: rgba(255, 255, 255, .35); pointer-events: none; }
+.ap { gap: 6px; }
+.ap-tube { width: 78px; height: 14px; display: block; }
+.ap em { font-style: normal; }
+.aura { animation: auraPulse 3.2s ease-in-out infinite; }
+@keyframes auraPulse { 50% { filter: brightness(1.25); } }
+#fx-canvas { position: absolute; left: 0; top: 0; pointer-events: none; }
+.afterimage {
+  position: absolute; width: 52px; height: 52px; border-radius: 50%; pointer-events: none;
+  border: 2px solid rgba(226, 232, 240, .7); box-shadow: 0 0 16px rgba(226, 232, 240, .45);
+  animation: after .5s ease forwards;
+}
+@keyframes after { to { opacity: 0; transform: scale(1.35); } }
+.crit-flash { position: fixed; inset: 0; pointer-events: none; z-index: 25; background: rgba(255, 244, 214, .28); animation: flash .2s ease forwards; }
+@keyframes flash { to { opacity: 0; } }
+@keyframes shake {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-5px, 2px); }
+  40% { transform: translate(5px, -3px); }
+  60% { transform: translate(-3px, -2px); }
+  80% { transform: translate(3px, 2px); }
+}
+.battlemap-container.shake { animation: shake .32s linear; }
+.floater { position: absolute; font-weight: bold; pointer-events: none; animation: float 1s ease forwards; text-shadow: 0 2px 6px #000; }
+@media (prefers-reduced-motion: reduce) {
+  .ring-dash, .aura, .token.active, .afterimage, .crit-flash, .battlemap-container.shake, .floater, .dice.shown { animation: none !important; }
+}

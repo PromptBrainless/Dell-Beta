@@ -3,7 +3,11 @@ class QuickAction {
   constructor(c, i) {
     Object.assign(this, { id: c.id, name: c.name, icon: c.icon, type: c.type, cooldown: c.cooldown || 0, enabled: c.enabled !== false, onClick: c.onClick, hotkey: String(i + 1), left: 0 });
     this.el = el('button', 'quick-action ' + this.type, `<img alt=""><span class="action-key">${this.hotkey}</span><span class="action-name"></span>`);
-    $('img', this.el).src = this.icon; $('.action-name', this.el).textContent = this.name; this.el.title = `${this.name} (${this.hotkey})`; this.el.disabled = !this.enabled;
+    $('img', this.el).src = this.icon; $('.action-name', this.el).textContent = this.name;
+    this.el.title = `${this.name} (${this.hotkey})`;
+    this.el.setAttribute('aria-label', `${this.name}, Taste ${this.hotkey}`);
+    this.el.setAttribute('aria-keyshortcuts', this.hotkey);
+    this.el.disabled = !this.enabled;
     this.el.onclick = () => this.trigger();
     this.el.oncontextmenu = e => { e.preventDefault(); emit('quickActionDetails', { actionId: this.id }); };
   }

@@ -1,22 +1,78 @@
-# Gridless Fantasy VTT HUD (ECHO//BRUCH)
+# ECHO//BRUCH – Gridless Fantasy-VTT-HUD
 
-Start (http nötig, wegen ES-Modul): `python -m http.server 3000` im Ordner, dann http://localhost:3000.
+Dunkles Fantasy-HUD für einen einzelnen Kampf. Vanilla HTML, CSS und JS. Die Regeln liegen gebündelt in `js/game/w100.js` und werden nicht von Hand geändert.
+
+## Start
+
+Im Ordner `vtt-hud`:
+
+```bash
+python3 -m http.server 3000
+```
+
+Dann die Seite im Browser öffnen. ES-Module brauchen HTTP, ein Doppelklick auf die Datei reicht nicht.
+
+Weitere Skripte:
+
+| Skript | Zweck |
+| --- | --- |
+| `npm run lint` | `node --check` über `js/` und `scripts/` |
+| `npm run check` | Playwright: Konsole, Layer `l0`–`l10`, keine 404, Screenshots |
+| `npm run build:assets` | AVIF/WebP/JPEG aus den Originalen, Manifest, Porträts, Icon-Raster |
 
 ## Aufbau
-- HUD: `index.html`, `css/`, `js/*.js` laut PDF. Layer: 0 Arena · 1 Marker · 2 Token · 3 Ringe · 4 Auren · 5 Sicht · 6 Flächen · 7 Status · 8 Flanke · 9 UI · 10 Buttons.
-- Module reden nur über Events (`emit`/`on`, `js/utils.js`) und sind einzeln entfernbar.
-- Kampf: `js/game/w100.js` ist die gebündelte Engine aus Dell-Beta (`src/game/w100/*.ts`: Regeln, Tafeln, Aktionen, Charaktere, Karte, Kampf). `js/game/bridge.js` verbindet sie mit dem HUD.
-- Spielzug: du bist Seite A. Tasten 1–4 (Schlagen, Parieren, Ausweichen, Vorrücken+Schlagen), Klick auf die Karte bewegt, „Zug beenden“ = Passen. Seite B spielt `bot()`.
-- Das alte Gitter 64×64 existiert nur als Rechenmaß (`PX_PER_FELD` in `js/data/characters.js`), gezeichnet wird kein Raster.
 
-## Aus den Dell-Beta-ZIPs übernommen
-Engine (gebündelt), 5 Charaktere + Porträts, v2-Kampfgrafiken (`assets/art/<figur>/`, auf 640 px), Hintergründe (`assets/textures/`), Protokolle (`docs/`).
+- `index.html` – Layer 0–10
+- `css/` – ein Blatt je HUD-Teil, dazu `frames.css`, `fx.css`, `zones.css`, `layout.css`
+- `js/` – ein Modul je HUD-Teil, nur über `emit` / `on` in `js/utils.js`
+- `js/game/w100.js` – Engine, ohne DOM
+- `js/game/bridge.js` – verbindet Engine und HUD
+- `js/game/extras.js` – Würfel, Trefferzonen-Figur, Krit- und Patzertafeln
+- `js/fx.js` – Treffer, Krit, Block, Ausweichen, Status
+- `assets/manifest.json` – tauschbare Assets
 
-## Bewusst nicht übernommen
-`.grok/`, `.vercel/`, Vite/React/Auth/Datenbank, `scripts/`, Screenshots, älterer HD-Satz (`public/kampf/hd`), `archive/`, `attachments/`, React-Komponenten (`src/components/echo`). Liegen weiter im Repo.
+Layer, fest: 0 Arena · 1 Marker · 2 Token · 3 Ringe · 4 Auren · 5 Sicht · 6 Flächen · 7 Status · 8 Flanke · 9 UI · 10 Buttons.
 
-## Offen
-Krit-/Patzertafeln als eigene Anzeige, Würfelanimation, Foundry-Export (`export.ts`), HD-Satz.
+## Spiel
 
-## Vercel
-Das HUD ist eine statische Website und benötigt keinen Build-Schritt. Importiere das Repository in Vercel und setze **Root Directory** auf `vtt-hud`, **Framework Preset** auf `Other`, **Build Command** leer und **Output Directory** auf `.`. Danach kann Vercel die enthaltene `index.html` direkt ausliefern. Eine tatsächliche Veröffentlichung erfordert Zugriff auf das zugehörige Vercel-Konto bzw. Projekt.
+Du bist Seite A. In der Lobby Figur und Gegner wählen, dann Kampf beginnen.
+
+- Ziehen oder Karte antippen: bewegen
+- Gegner antippen: schlagen
+- `1`–`4` Schlagen, Parieren, Ausweichen, Vorrücken
+- `Enter` oder „Zug beenden“: passen
+- `T` Tafeln
+- `WASD` oder Pfeile: Karte schwenken
+- Archivar darf die Trefferzone wählen (Figur oder Liste)
+- „Beide spielen“ schaltet den Bot ab
+
+Grün verbündet, Gelb neutral, Rot feindlich, Violett geheim, Amber Reichweite.
+
+Jeder Welt-Layer hat einen Schalter. Unter „Teile“ lassen sich Kampfspalte, Initiative, Kompass, Maßstab, Runde, Aktionen und Zug ausblenden. An den Griffen `⠿` und `⌟` werden Flächen verschoben und skaliert. „Layout“ setzt das zurück.
+
+## Assets
+
+Originale liegen in den Workspace-ZIPs unter `public/kampf/v2` (1792×1008). `scripts/build-assets.mjs` entpackt sie nach `vtt-hud/.sources` (nicht versioniert) und schreibt:
+
+- Kampfbilder: `@1x` 640, `@2x` 1280, `@3x` 1792 als AVIF und WebP, JPEG für 1× und 2×
+- Hintergründe mit Vignette, ohne Raster
+- Porträts 256 / 512 / 768, rund (Alpha) und quadratisch
+- Icons als SVG plus Raster 24 / 32 / 48
+
+Die Seite wählt per `image-set()` und `<picture srcset>` nach Auflösung. Manifest-Felder: `id`, `layer`, `files`, `anchor`, `size`. Eine Datei austauschen heißt denselben Pfad ersetzen oder den Eintrag zeigen lassen.
+
+## Theme
+
+In `css/main.css`: `--gold`, `--bg`, `--green`, `--red`, `--amber`, `--violet`, `--friendly`, `--neutral`, `--hostile`, `--secret`, `--text`, `--dock`, `--panel`.
+
+Effekte: Qualitätsstufe im Layer-Schalter, Schlüssel `hud-quality` und `hud-fx` im lokalen Speicher. `prefers-reduced-motion` schaltet Partikel, Ruckler und Würfelrolle ab.
+
+## Ereignisse
+
+Kampf: `blick`, `fightStart`, `endTurn`, `mapClick`, `tokenMoved`, `tokenSelect`, `roundChange`, `viewchange`, `hud:shell`.
+
+Effekte: `fx:hit`, `fx:crit`, `fx:block`, `fx:dodge`, `fx:status`, `fx:quality`.
+
+## Veröffentlichung
+
+Statische Seite. Bei Vercel das Root Directory auf `vtt-hud` stellen, Framework „Other“, Build leer, Output `.`.

@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { spawn } from 'node:child_process';
 import { createServer } from 'node:net';
 import { mkdir } from 'node:fs/promises';
@@ -34,7 +35,13 @@ let browser;
 
 try {
   await mkdir(screenshotDir, { recursive: true });
-  browser = await chromium.launch({ headless: true });
+  browser = await chromium.launch({
+    headless: true,
+    executablePath: existsSync('/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell')
+      ? '/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell'
+      : undefined,
+    args: ['--no-sandbox', '--disable-dev-shm-usage'],
+  });
 
   for (const viewport of viewports) {
     const page = await browser.newPage({ viewport, deviceScaleFactor: 1 });
@@ -68,6 +75,17 @@ try {
     if (brokenImages.length) errors.push(`${viewport.name}: defekte Bilder ${brokenImages.join(', ')}`);
 
     await page.screenshot({ path: path.join(screenshotDir, `${viewport.name}.png`), fullPage: true });
+    if (viewport.name === 'desktop') {
+      await page.click('#startFight');
+      await page.waitForTimeout(600);
+      for (let turn = 0; turn < 10; turn++) {
+        const hit = await page.locator('.lp-blick:not([hidden]) img').count();
+        if (hit) break;
+        await page.keyboard.press('Enter');
+        await page.waitForTimeout(1100);
+      }
+      await page.screenshot({ path: path.join(screenshotDir, 'combat.png') });
+    }
     await page.close();
   }
 } finally {

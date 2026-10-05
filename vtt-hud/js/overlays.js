@@ -26,7 +26,7 @@ const Overlays = {
   },
   /* Layer 1: festes Hindernis (Bau), Kante s in Welt-Pixeln, Mittelpunkt (x0+s/2, y0+s/2) */
   block(x0, y0, s, title) {
-    const b = this.put('l1', 'marker terrain', x0 + s / 2, y0 + s / 2, s, s, '▣', { fontSize: '40px', background: 'repeating-linear-gradient(45deg,rgba(60,60,80,.9),rgba(60,60,80,.9) 10px,rgba(40,40,60,.9) 10px,rgba(40,40,60,.9) 20px)' });
+    const b = this.put('l1', 'marker terrain', x0 + s / 2, y0 + s / 2, s, s, 'Bau', { fontSize: '13px', letterSpacing: '0.08em', background: 'rgba(22,20,28,.9)', border: '1px solid rgba(212,175,55,.45)', boxShadow: 'inset 0 0 24px rgba(0,0,0,.55)' });
     b.title = title || 'Hindernis'; return b;
   },
   /* Layer 8: Flankierungsanzeige zwischen zwei Token */

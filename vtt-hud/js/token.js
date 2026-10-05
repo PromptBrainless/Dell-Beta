@@ -4,9 +4,10 @@ class Token {
     Object.assign(this, { id: c.id, name: c.name, disposition: c.disposition || 'neutral', size: c.size || 'medium',
       position: c.position || { x: 0, y: 0 }, scale: c.scale || 1, hp: c.hp || { current: 10, max: 10 },
       image: c.image || portrait(c.name, c.color || '#4a3b6e'), selected: false, active: false, hidden: !!c.hidden, defeated: false });
-    this.el = el('div', 'token', `<div class="portrait"><img alt=""></div><div class="hp"><i></i></div><div class="name"></div>`);
+    this.el = el('div', 'token', `<div class="portrait"><img alt=""></div><svg class="hp-tube" viewBox="0 0 100 14" aria-hidden="true"><rect class="tube-glass" x="1" y="1" width="98" height="12" rx="6"/><rect class="tube-ghost" x="3" y="3.5" width="94" height="7" rx="3.5"/><rect class="tube-fill" x="3" y="3.5" width="94" height="7" rx="3.5"/><rect class="tube-shine" x="8" y="4.2" width="70" height="1.6" rx="0.8"/></svg><div class="name"></div>`);
     $('img', this.el).src = this.image; $('.name', this.el).textContent = this.name;
     this.ring = el('div', 'token-ring ' + this.disposition);
+    this.ring.innerHTML = `<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="ring-track" cx="50" cy="50" r="46"/><circle class="ring-dash" cx="50" cy="50" r="46" pathLength="100"/></svg>`;
     this.statusBox = el('div', 'status-stack');
     $('#l2').appendChild(this.el); $('#l3').appendChild(this.ring); $('#l7').appendChild(this.statusBox);
     this.bindDrag(); this.updateHP(this.hp.current, this.hp.max); this.sync();
@@ -39,7 +40,17 @@ class Token {
   setHidden(v) { this.hidden = v; this.el.classList.toggle('hidden', v); }
   setDefeated(v) { this.defeated = v; this.el.classList.toggle('defeated', v); }
   updateHP(current, max = this.hp.max) {
-    this.hp = { current, max }; $('.hp i', this.el).style.width = Math.max(0, current / max * 100) + '%'; emit('hpChange', { id: this.id });
+    const prev = this.hp?.current ?? current;
+    this.hp = { current, max };
+    const now = Math.max(0, Math.min(1, max ? current / max : 0));
+    const was = Math.max(0, Math.min(1, max ? prev / max : 0));
+    const fill = $('.tube-fill', this.el), ghost = $('.tube-ghost', this.el);
+    if (fill) fill.style.transform = `scaleX(${now})`;
+    if (ghost) {
+      ghost.style.transform = `scaleX(${Math.max(was, now)})`;
+      if (current < prev) requestAnimationFrame(() => { ghost.style.transform = `scaleX(${now})`; });
+    }
+    emit('hpChange', { id: this.id });
   }
   remove() { this.el.remove(); this.ring.remove(); this.statusBox.remove(); }
 }

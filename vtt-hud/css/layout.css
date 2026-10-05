@@ -1,0 +1,48 @@
+.hud-grip, .hud-scale {
+  position: absolute; z-index: 5; width: 22px; height: 18px; padding: 0;
+  font-size: 11px; line-height: 16px; pointer-events: auto; opacity: .85;
+}
+.hud-grip { top: -8px; right: -8px; cursor: grab; }
+.hud-scale { top: -8px; right: 16px; cursor: nwse-resize; }
+.hud-off { visibility: hidden !important; pointer-events: none !important; }
+#layer-toggles { max-width: min(420px, 46vw); align-items: center; }
+#layer-toggles.folded label { display: none; }
+.layer-fold, .layout-reset { font-size: 11px; padding: 2px 6px; }
+.part-more { font-size: 11px; }
+.part-more summary { cursor: pointer; color: var(--gold); }
+#layer-toggles.folded .part-more { display: none; }
+.part-toggle select { background: #14141e; color: var(--text); border: 1px solid rgba(212, 175, 55, .4); border-radius: 4px; }
+.end-turn-btn img.btn-icon { width: 18px; height: 18px; }
+.end-turn-btn.hud-moved, .end-turn-btn.hud-moved:hover,
+.quick-actions.hud-moved { transform: none; }
+.ui-layer > .turnbar { pointer-events: none; }
+@media (max-width: 800px) {
+  #layer-toggles { left: 8px; top: 8px; max-width: calc(100% - 16px); z-index: 6; }
+  .round-display { left: 8px; right: auto; top: 46px; width: 132px; height: 44px; padding: 0 8px; }
+  .round-value { font-size: 20px; min-width: 28px; }
+  .compass { left: auto; right: 78px; top: 46px; bottom: auto; width: 44px; height: 44px; }
+  .compass-needle { height: 26px; }
+  .scale-bar { right: 8px; top: 46px; bottom: auto; width: 64px; height: 44px; }
+  .scale-line { display: none; }
+  .mapbar { display: none; }
+  .turnbar { top: 96px !important; bottom: auto !important; max-width: calc(100% - 20px); text-align: center; }
+  .initiative-tracker { left: 8px; right: 8px; top: auto; bottom: 64px; width: auto; height: 72px; }
+  .initiative-header, .initiative-controls { display: none; }
+  .initiative-list { display: flex; gap: 6px; overflow-x: auto; padding: 6px; }
+  .initiative-entry { flex: 1 1 46%; margin: 0; padding: 6px; }
+  .quick-actions { left: 8px; right: 128px; bottom: 8px; top: auto; width: auto; transform: none !important; gap: 4px; justify-content: flex-start; }
+  .quick-action { width: 52px; height: 48px; }
+  .end-turn-btn { left: auto; right: 8px; bottom: 8px; transform: none; width: 112px; height: 48px; }
+  .end-turn-btn:hover { transform: none; }
+  .log-panel { left: 8px; right: 8px; width: auto !important; top: 148px; bottom: 146px; height: auto; z-index: 7; }
+  .log-panel.collapsed { top: auto; right: auto; width: max-content !important; bottom: 146px; height: auto; }
+  .mode-3d { left: auto; right: 8px; bottom: auto; top: 8px; }
+  .lobby-card, .result-card { max-height: calc(100% - 24px); overflow: auto; }
+}
+@media (max-width: 1200px) and (min-width: 801px) {
+  #layer-toggles { max-width: 230px; max-height: 64px; overflow: auto; }
+  .mapbar { top: 8px; left: 248px; right: 230px; width: auto; transform: none; justify-content: center; }
+  .turnbar { top: 48px; }
+  .initiative-tracker { top: 108px; }
+  .round-display { z-index: 4; }
+}

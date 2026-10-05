@@ -12,7 +12,7 @@ const CHARACTERS = [
   "reichweite": 8,
   "schaden": 6,
   "effekt": "sturz",
-  "image": "assets/portraits/brecher.jpg"
+  "image": "assets/portraits/brecher.png"
  },
  {
   "id": "laeuferin",
@@ -24,7 +24,7 @@ const CHARACTERS = [
   "reichweite": 5,
   "schaden": 4,
   "effekt": "blutung",
-  "image": "assets/portraits/laeuferin.jpg"
+  "image": "assets/portraits/laeuferin.png"
  },
  {
   "id": "archivar",
@@ -36,7 +36,7 @@ const CHARACTERS = [
   "reichweite": 40,
   "schaden": 5,
   "effekt": "fessel",
-  "image": "assets/portraits/archivar.jpg"
+  "image": "assets/portraits/archivar.png"
  },
  {
   "id": "waechter",
@@ -48,7 +48,7 @@ const CHARACTERS = [
   "reichweite": 16,
   "schaden": 4,
   "effekt": "blutung",
-  "image": "assets/portraits/waechter.jpg"
+  "image": "assets/portraits/waechter.png"
  },
  {
   "id": "jaeger",
@@ -60,6 +60,6 @@ const CHARACTERS = [
   "reichweite": 48,
   "schaden": 4,
   "effekt": "keine",
-  "image": "assets/portraits/jaeger.jpg"
+  "image": "assets/portraits/jaeger.png"
  }
 ];

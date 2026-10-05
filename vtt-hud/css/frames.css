@@ -1,0 +1,45 @@
+.panel {
+  border: 1px solid color-mix(in srgb, var(--gold) 62%, #2a2114);
+  border-radius: 12px;
+  background:
+    url(../assets/ui/rivet.svg) 7px 7px / 9px 9px no-repeat,
+    url(../assets/ui/rivet.svg) calc(100% - 7px) 7px / 9px 9px no-repeat,
+    url(../assets/ui/rivet.svg) 7px calc(100% - 7px) / 9px 9px no-repeat,
+    url(../assets/ui/rivet.svg) calc(100% - 7px) calc(100% - 7px) / 9px 9px no-repeat,
+    url(../assets/ui/leather.svg),
+    radial-gradient(120% 80% at 50% 0%, rgba(212, 175, 55, .16), transparent 46%),
+    color-mix(in srgb, #14121a 86%, transparent);
+  backdrop-filter: blur(12px) saturate(1.2);
+  box-shadow: inset 0 0 0 1px rgba(255, 236, 200, .05), inset 0 0 22px rgba(0, 0, 0, .35), 0 12px 32px rgba(0, 0, 0, .45);
+}
+.quick-action, .end-turn-btn, .map-chip, .seat-toggle, .initiative-btn, .round-btn {
+  --edge: color-mix(in srgb, var(--gold) 55%, transparent);
+  border-color: var(--edge);
+}
+.quick-action:hover, .end-turn-btn:hover, .map-chip:hover, .initiative-btn:hover { --edge: var(--gold); }
+.quick-action:active, .end-turn-btn:active { --edge: #fff4d0; }
+.quick-action:disabled, .end-turn-btn:disabled { --edge: #5c564c; }
+.lp-title, .layer-fold, .layout-reset, .hud-grip, .hud-scale, .zp-head button {
+  background: #1a160f;
+  color: var(--gold);
+  border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent);
+  border-radius: 6px;
+}
+.lp-title { padding: 2px 8px; }
+#haze {
+  position: absolute; inset: -8%; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(212, 140, 60, .18), transparent 42%),
+    radial-gradient(circle at 72% 68%, rgba(90, 110, 150, .16), transparent 46%);
+  background-repeat: no-repeat;
+  mix-blend-mode: screen;
+  opacity: .8;
+}
+#world { z-index: 1; }
+.log-panel { container-type: inline-size; }
+@container (max-width: 280px) {
+  .sheet { grid-template-columns: 48px 1fr; }
+  .sheet img { width: 48px; height: 48px; }
+}
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.lp-foot, .zp-info, .round-label { color: #ddd4c4; }
