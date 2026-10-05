@@ -1,5 +1,6 @@
 /* Kampfschale über dem aktuellen HUD. Engine bleibt js/game/w100.js. */
-:root { --dock: 340px; }
+.mode-3d { position: fixed; z-index: 40; left: 16px; bottom: 16px; padding: 8px 12px; border-radius: 999px; background: #3a2e12; color: #d4af37; border: 1px solid rgba(212,175,55,.6); text-decoration: none; pointer-events: auto; }
+
 .log-panel { width: var(--dock); display: flex; flex-direction: column; top: 64px; bottom: 16px; }
 .lp-head select, .lp-head button, .map-chip, .seat-toggle, .lobby button, .result button {
   background: #14141e; color: var(--text); border: 1px solid rgba(212,175,55,.45); border-radius: 6px; padding: 4px 8px;

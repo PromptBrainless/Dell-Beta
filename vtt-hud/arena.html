@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ECHO//BRUCH · 3D</title>
+<link rel="stylesheet" href="css/arena3d.css">
+</head>
+<body>
+<div id="view"></div>
+<div id="ui">
+  <header>
+    <a href="./">2D-HUD</a>
+    <strong id="turn">ECHO//BRUCH</strong>
+    <span id="ap"></span>
+  </header>
+  <aside id="sheet"></aside>
+  <section id="log" aria-live="polite"></section>
+  <div id="actions">
+    <button id="act-schlag" data-act="schlag">Schlagen</button>
+    <button id="act-parieren" data-act="parieren">Parieren</button>
+    <button id="act-ausweichen" data-act="ausweichen">Ausweichen</button>
+    <button id="act-hinein" data-act="hinein">Vorrücken</button>
+    <button id="act-passen" data-act="passen">Zug beenden</button>
+  </div>
+  <div id="resolve"></div>
+</div>
+<div id="lobby">
+  <div class="card">
+    <h1>ECHO//BRUCH</h1>
+    <p>3D-Arena. Fünf Kämpfer, dieselbe Kampflogik. Figur ziehen oder Boden antippen bewegt. Gegner antippen schlägt.</p>
+    <div id="picks"></div>
+    <div class="row">
+      <button data-map="halle">Halle</button>
+      <button data-map="bruch">Bruch</button>
+      <button data-map="funken">Funken</button>
+      <button data-map="nebel">Nebel</button>
+      <button id="seat">Beide spielen</button>
+      <button id="start" class="primary">Kampf beginnen</button>
+    </div>
+  </div>
+</div>
+<div id="result" hidden>
+  <div class="card"><h2 id="resultTitle"></h2><p id="resultText"></p><button id="again">Nochmal</button></div>
+</div>
+<script type="importmap">
+{ "imports": { "three": "https://unpkg.com/three@0.170.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/" } }
+</script>
+<script type="module" src="js/arena3d.js"></script>
+</body>
+</html>
